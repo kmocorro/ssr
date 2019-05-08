@@ -43,7 +43,11 @@ export default () => {
                 let token = res.data.token // api/login return object {token: e...}
                 
                 setToken(token);
-                window.location.reload(); // uhm...
+                
+                if (typeof window !== 'undefined') {
+                    window.location.reload(); // uhm...
+                }
+                
             }
         })
         .catch(err => {
@@ -52,11 +56,16 @@ export default () => {
     }
 
     function setToken(token){
-        localStorage.setItem('ldap_token', token);
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('ldap_token', token);
+        }
+        
     }
 
     function getToken(){
-        return localStorage.getItem('ldap_token');
+        if (typeof window !== 'undefined') {
+            return localStorage.getItem('ldap_token');
+        }
     }
 
     function loggedIn(){
