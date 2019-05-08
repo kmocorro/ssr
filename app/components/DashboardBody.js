@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReportsBody from './ReportsBody'
 
 export default (metaDashboard) => {
@@ -6,22 +6,10 @@ export default (metaDashboard) => {
     console.log(metaDashboard.metaDashboard.meta.data.dashboard[0].id);
     const metaDashboard_props = metaDashboard.metaDashboard.meta.data;
 
-    const [ medianEfficiency, setMedianEfficiency ] = useState(0);
-    const [ binNE, setBinNE ] = useState(0);
-    const [ cosmetics, setCosmetics ] = useState(0);
-    const [ cycletime, setCycletime ] = useState(0);
-
-    if(metaDashboard_props){
-        if(metaDashboard_props.dashboard[0].id === 1){
-            setMedianEfficiency(metaDashboard_props.dashboard[0].value);
-        } else if(metaDashboard_props.dashboard[1].id === 2){
-            setBinNE(metaDashboard_props.dashboard[1].value);
-        } else if(metaDashboard_props.dashboard[2].id === 3){
-            setCosmetics(metaDashboard_props.dashboard[2].value);
-        } else if(metaDashboard_props.dashboard[3].id === 4){
-            setCycletime(metaDashboard_props.dashboard[3].value);
-        }
-    }
+    const medianEfficiency = metaDashboard_props.dashboard[0].value;
+    const binNE = metaDashboard_props.dashboard[1].value;
+    const cosmetics = metaDashboard_props.dashboard[2].value;
+    const cycletime = metaDashboard_props.dashboard[3].value;
 
     return (
         <div style={{
