@@ -4,22 +4,22 @@ import ReportsBody from './ReportsBody'
 export default (metaDashboard) => {
 
     console.log(metaDashboard.metaDashboard.meta.data.dashboard[0].id);
-    const props = metaDashboard.metaDashboard.meta.data;
+    const metaDashboard_props = metaDashboard.metaDashboard.meta.data;
 
     const [ medianEfficiency, setMedianEfficiency ] = useState(0);
     const [ binNE, setBinNE ] = useState(0);
     const [ cosmetics, setCosmetics ] = useState(0);
     const [ cycletime, setCycletime ] = useState(0);
 
-    if(props){
-        if(props.dashboard[0].id === 1){
-            setMedianEfficiency(props.dashboard[0].value);
-        } else if(props.dashboard[1].id === 2){
-            setBinNE(props.dashboard[1].value);
-        } else if(props.dashboard[2].id === 3){
-            setCosmetics(props.dashboard[2].value);
-        } else if(props.dashboard[3].id === 4){
-            setCycletime(props.dashboard[3].value);
+    if(metaDashboard_props){
+        if(metaDashboard_props.dashboard[0].id === 1){
+            setMedianEfficiency(metaDashboard_props.dashboard[0].value);
+        } else if(metaDashboard_props.dashboard[1].id === 2){
+            setBinNE(metaDashboard_props.dashboard[1].value);
+        } else if(metaDashboard_props.dashboard[2].id === 3){
+            setCosmetics(metaDashboard_props.dashboard[2].value);
+        } else if(metaDashboard_props.dashboard[3].id === 4){
+            setCycletime(metaDashboard_props.dashboard[3].value);
         }
     }
 
