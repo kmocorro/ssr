@@ -26,4 +26,6 @@ export default function router(req, res){
         </StaticRouter>
     )
 
+    res.status(200).send(renderFullPage(html, {}));
+
 }
