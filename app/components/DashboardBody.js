@@ -1,9 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReportsBody from './ReportsBody'
 
 export default (metaDashboard) => {
 
-    console.log(metaDashboard.metaDashboard.meta.data.dashboard[0].value);
+    console.log(metaDashboard.metaDashboard.meta.data.dashboard[0].id);
+    const metaDashboard_props = metaDashboard.metaDashboard.meta.data;
+
+    const dashboard = useDashboard('loading...');
+
+    function useDashboard(id){
+        const [ value, setValue ] = useState(id);
+
+        function getMedianEfficiency(){
+            if(metaDashboard_props){
+                setValue(metaDashboard_props.dashboard[0].value);
+            } else {
+                setValue('errloading...');
+            }
+        }
+
+        function getBinNE(){
+            if(metaDashboard_props){
+                setValue(metaDashboard_props.dashboard[1].value);
+            } else {
+                setValue('errloading...');
+            }
+        }
+
+        function getCosmetics(){
+            if(metaDashboard_props){
+                setValue(metaDashboard_props.dashboard[2].value);
+            } else {
+                setValue('errloading...');
+            }
+        }
+
+        function getCycletime(){
+            if(metaDashboard_props){
+                setValue(metaDashboard_props.dashboard[3].value);
+            } else {
+                setValue('errloading...');
+            }
+        }
+
+        return {
+            value,
+            getMedianEfficiency: getMedianEfficiency,
+            getBinNE: getBinNE,
+            getCosmetics: getCosmetics,
+            getCycletime: getCycletime
+        }
+    
+
+    }
+
 
     return (
         <div style={{
@@ -139,7 +189,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        25.08
+                                        {dashboard.getMedianEfficiency}
                                         </strong>
                                         <span style={{
                                             color:"green",
@@ -176,7 +226,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        65.5
+                                        {dashboard.getBinNE}
                                         </strong>
                                         <span style={{
                                             color:"green",
@@ -213,7 +263,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        92.0
+                                        {dashboard.getCosmetics}
                                         </strong>
                                         <span style={{
                                             color:"green",
@@ -250,7 +300,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        1.72
+                                        {dashboard.getCycletime}
                                         </strong>
                                         <span style={{
                                             color:"red",
