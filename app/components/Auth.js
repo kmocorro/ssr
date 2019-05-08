@@ -43,11 +43,12 @@ export default () => {
                 let token = res.data.token // api/login return object {token: e...}
                 
                 setToken(token);
+                console.log(token);
                 
                 if (typeof window !== 'undefined') {
                     window.location.reload(); // uhm...
                 }
-                
+
             }
         })
         .catch(err => {
