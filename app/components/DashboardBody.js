@@ -1,7 +1,10 @@
 import React from 'react';
 import ReportsBody from './ReportsBody'
 
-export default () => {
+export default (metaDashboard) => {
+
+    const efficiency = metaDashboard.data.dashboard[0].value
+
     return (
         <div style={{
             width: "836px",
@@ -136,7 +139,7 @@ export default () => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        25.08
+                                        {efficiency}
                                         </strong>
                                         <span style={{
                                             color:"green",

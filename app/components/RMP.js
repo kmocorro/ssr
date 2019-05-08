@@ -3,7 +3,6 @@ import SideBar from './SideBar'
 import NavBar from './NavBar'
 import RMPBody from './RMPBody'
 
-
 export default () => {
 
     return (

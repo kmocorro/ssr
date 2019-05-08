@@ -3,7 +3,7 @@ import SideBar from './SideBar'
 import NavBar from './NavBar'
 import DashboardBody from './DashboardBody'
 
-export default () => {
+export default (metaDashboard) => {
 
     return (
         <div style={{
@@ -23,7 +23,7 @@ export default () => {
             }}>
                 <NavBar/>
                 <SideBar/>
-                <DashboardBody/>
+                <DashboardBody metaDashboard={metaDashboard} />
             </div>
         </div>
     )

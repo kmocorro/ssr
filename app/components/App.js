@@ -5,7 +5,7 @@ import Home from './Home'
 import Auth from './Auth'
 import RMP from './RMP'
 
-export default () => {
+export default (metaDashboard) => {
     function isLoggedIn(){
         let tokener = getToken();
         return tokener; //blnk false
@@ -17,14 +17,13 @@ export default () => {
         }
     }
 
-
     return (
         <div>
             { isLoggedIn()
                 ? 
                 <div>
                     <Switch>
-                        <Route path="/" exact component={Home}/>
+                        <Route path="/" exact render={() => <Home {...metaDashboard}/>}/>
                         <Route path="/uploader/rmp" component={RMP}/>
                     </Switch>
                 </div>
