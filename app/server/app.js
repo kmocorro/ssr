@@ -2,6 +2,7 @@ import path from 'path'
 import express from 'express'
 import cors from 'cors'
 
+import dash_router from './dash_router'
 import router from './router'
 
 const app = express();
@@ -11,7 +12,7 @@ app.use(cors());
 
 app.use(assets);
 
-app.get('/', router);
+app.get('/', dash_router);
 app.get('/uploader/rmp', router);
 
 export default app;

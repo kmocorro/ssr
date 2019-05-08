@@ -4,7 +4,6 @@ import { matchPath, StaticRouter } from 'react-router-dom'
 
 import routes from './routes'
 import renderFullPage from './renderFullPage'
-import getDashboard from '../services/getDashboard'
 import App from '../components/App'
 
 export default function router(req, res){
@@ -19,22 +18,12 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
-    return getDashboard()
-        .then(response => {
-            const metaDashboard = { data: response.data }
-
-            const context = {}
-
-            console.log(metaDashboard)
-            
-            const html = renderToString(
-                <StaticRouter context={context} location={req.url} >
-                    <App meta={metaDashboard}/>
-                </StaticRouter>
-            )
-
-            res.status(200).send(renderFullPage(html, metaDashboard));
-        })
-        .catch(err => res.status(404).send(`${err}: gg sir.`));
+    const context = {}
+    
+    const html = renderToString(
+        <StaticRouter context={context} location={req.url} >
+            <App/>
+        </StaticRouter>
+    )
 
 }
