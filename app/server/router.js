@@ -20,8 +20,8 @@ export default function router(req, res){
     }
 
     return getDashboard()
-        .then(res => {
-            const metaDashboard = { data: res.data }
+        .then(response => {
+            const metaDashboard = { data: response.data }
 
             const context = {}
             
