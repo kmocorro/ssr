@@ -3,7 +3,7 @@ import ReportsBody from './ReportsBody'
 
 export default (metaDashboard) => {
 
-    const efficiency = metaDashboard.data.dashboard[0].value
+    console.log(metaDashboard);
 
     return (
         <div style={{
@@ -139,7 +139,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        {efficiency}
+                                        25.08
                                         </strong>
                                         <span style={{
                                             color:"green",
