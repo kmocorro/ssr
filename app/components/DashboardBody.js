@@ -12,13 +12,13 @@ export default (metaDashboard) => {
     const [ cycletime, setCycletime ] = useState('loading...');
 
     if(props){
-        if(props.dashboard[0].id == 1){
+        if(props.dashboard[0].id === 1){
             setMedianEfficiency(props.dashboard[0].value);
-        } else if(props.dashboard[0].id == 2){
+        } else if(props.dashboard[1].id === 2){
             setBinNE(props.dashboard[1].value);
-        } else if(props.dashboard[0].id == 3){
+        } else if(props.dashboard[2].id === 3){
             setCosmetics(props.dashboard[2].value);
-        } else if(props.dashboard[0].id == 4){
+        } else if(props.dashboard[3].id === 4){
             setCycletime(props.dashboard[3].value);
         }
     }
