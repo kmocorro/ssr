@@ -12,5 +12,6 @@ app.use(cors());
 app.use(assets);
 
 app.get('/', router);
+app.get('/uploader/rmp', router);
 
 export default app;
