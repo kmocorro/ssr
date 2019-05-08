@@ -4,12 +4,12 @@ import ReportsBody from './ReportsBody'
 export default (metaDashboard) => {
 
     const metaDashboard_props = metaDashboard.metaDashboard.meta.data;
-    /*
-    const medianEfficiency = metaDashboard_props.dashboard[0].value;
+    
+    //const medianEfficiency = metaDashboard_props.dashboard[0].value;
     const binNE = metaDashboard_props.dashboard[1].value;
     const cosmetics = metaDashboard_props.dashboard[2].value;
     const cycletime = metaDashboard_props.dashboard[3].value;
-    */
+    
 
     const [ medianEfficiency, setMedianEfficiency ] = useState(0);
     
