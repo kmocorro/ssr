@@ -11,6 +11,6 @@ const assets = express.static(path.join(__dirname, '../'));
 app.use(cors());
 app.use(assets);
 
-app.get('*', router);
+app.get('/', router);
 
 export default app;
