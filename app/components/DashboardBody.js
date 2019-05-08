@@ -4,56 +4,24 @@ import ReportsBody from './ReportsBody'
 export default (metaDashboard) => {
 
     console.log(metaDashboard.metaDashboard.meta.data.dashboard[0].id);
-    const metaDashboard_props = metaDashboard.metaDashboard.meta.data;
+    const props = metaDashboard.metaDashboard.meta.data;
 
-    const dashboard = useDashboard('loading...');
+    const [ medianEfficiency, setMedianEfficiency ] = useState('loading...');
+    const [ binNE, setBinNE ] = useState('loading...');
+    const [ cosmetics, setCosmetics ] = useState('loading...');
+    const [ cycletime, setCycletime ] = useState('loading...');
 
-    function useDashboard(id){
-        const [ value, setValue ] = useState(id);
-
-        function getMedianEfficiency(){
-            if(metaDashboard_props){
-                setValue(metaDashboard_props.dashboard[0].value);
-            } else {
-                setValue('errloading...');
-            }
+    if(props){
+        if(props.dashboard[0].id == 1){
+            setMedianEfficiency(props.dashboard[0].value);
+        } else if(props.dashboard[0].id == 2){
+            setBinNE(props.dashboard[1].value);
+        } else if(props.dashboard[0].id == 3){
+            setCosmetics(props.dashboard[2].value);
+        } else if(props.dashboard[0].id == 4){
+            setCycletime(props.dashboard[3].value);
         }
-
-        function getBinNE(){
-            if(metaDashboard_props){
-                setValue(metaDashboard_props.dashboard[1].value);
-            } else {
-                setValue('errloading...');
-            }
-        }
-
-        function getCosmetics(){
-            if(metaDashboard_props){
-                setValue(metaDashboard_props.dashboard[2].value);
-            } else {
-                setValue('errloading...');
-            }
-        }
-
-        function getCycletime(){
-            if(metaDashboard_props){
-                setValue(metaDashboard_props.dashboard[3].value);
-            } else {
-                setValue('errloading...');
-            }
-        }
-
-        return {
-            value,
-            getMedianEfficiency: getMedianEfficiency,
-            getBinNE: getBinNE,
-            getCosmetics: getCosmetics,
-            getCycletime: getCycletime
-        }
-    
-
     }
-
 
     return (
         <div style={{
@@ -189,7 +157,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        {dashboard.getMedianEfficiency}
+                                        {medianEfficiency}
                                         </strong>
                                         <span style={{
                                             color:"green",
@@ -226,7 +194,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        {dashboard.getBinNE}
+                                        {binNE}
                                         </strong>
                                         <span style={{
                                             color:"green",
@@ -263,7 +231,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        {dashboard.getCosmetics}
+                                        {cosmetics}
                                         </strong>
                                         <span style={{
                                             color:"green",
@@ -300,7 +268,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        {dashboard.getCycletime}
+                                        {cycletime}
                                         </strong>
                                         <span style={{
                                             color:"red",
