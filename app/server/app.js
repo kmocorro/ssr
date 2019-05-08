@@ -7,11 +7,8 @@ import router from './router'
 const app = express();
 const assets = express.static(path.join(__dirname, '../'));
 
+app.use(cors());
 
-app.use(cors({ 
-    credentials: true,
-    origin: [corsOrigins.dev, corsOrigins.prod]
-}));
 app.use(assets);
 
 app.get('/', router);
