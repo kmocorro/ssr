@@ -6,10 +6,10 @@ export default (metaDashboard) => {
     console.log(metaDashboard.metaDashboard.meta.data.dashboard[0].id);
     const props = metaDashboard.metaDashboard.meta.data;
 
-    const [ medianEfficiency, setMedianEfficiency ] = useState('loading...');
-    const [ binNE, setBinNE ] = useState('loading...');
-    const [ cosmetics, setCosmetics ] = useState('loading...');
-    const [ cycletime, setCycletime ] = useState('loading...');
+    const [ medianEfficiency, setMedianEfficiency ] = useState(0);
+    const [ binNE, setBinNE ] = useState(0);
+    const [ cosmetics, setCosmetics ] = useState(0);
+    const [ cycletime, setCycletime ] = useState(0);
 
     if(props){
         if(props.dashboard[0].id === 1){
