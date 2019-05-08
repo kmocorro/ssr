@@ -3,7 +3,7 @@ import ReportsBody from './ReportsBody'
 
 export default (metaDashboard) => {
 
-    console.log(metaDashboard.meta.data.dashboard[0].value);
+    console.log(metaDashboard.metaDashboard.meta);
 
     return (
         <div style={{
