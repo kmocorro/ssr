@@ -72,45 +72,97 @@ export default () => {
 
     return (
         <div style={{
+            width: "100%",
+            margin: "0 auto",
         }}>
             <div style={{
+                width: "100%",
+                minHeight: "100vh",
+                display: "-webkit-box",
+                display: "-webkit-flex",
+                display: "-moz-box",
+                display: "-ms-flexbox",
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "15px",
+                background: "#f2f2f2",
             }}>
-                <form
-                    onSubmit={handleLoginSubmit}
-                    style={{
-                    }}
-                >   
-                    <fieldset>
-                        <div>
-                        <div>
-                            <h2 style={{}}>meta/fab4</h2>
-                        </div>
-                        <small>Username</small>
+                <div style={{
+                    width: "390px",
+                    background: "#fff",
+                    borderRadius: "10px",
+                    overflow: "hidden",
+                    padding: "77px 55px 33px 55px",
+                }}>
+                    <form
+                        onSubmit={handleLoginSubmit}
+                        style={{
+                            width: "100%",
+                            margin: "0px",
+                            padding: "0px",
+                            boxSizing: "border-box"
+                        }}
+                    >   
+                        <fieldset>
                             <div>
-                            <input type="text" placeholder="username" required value={username.value} onChange={username.onChange} 
-                                style={{
-                                fontSize: "18px",
-                                padding: "10px 10px 10px 5px",
-                                webkitAppearance: "none",
-                                display: "block",
-                                background: "#fafafa",
-                                color: "#636363",
-                                width: "100%",
-                                border: "none",
-                                borderRadius: "0",
-                                borderBottom: "1px solid #757575",
-                            }} />
+                                <div>
+                                    <h2 style={{
+                                        display: "block",
+                                        fontFamily: "Poppins-Bold",
+                                        fontSize: "30px",
+                                        color: "#333333",
+                                        lineHeight: "1.2",
+                                        textAlign: "center",
+                                        paddingBottom: "26px",
+                                    }}>meta/fab4</h2>
+                                </div>
+                                <small>Username</small>
+                                    <div style={{
+                                        position: "relative",
+                                        width: "100%",
+                                        position: "relative",
+                                        borderBottom: "2px solid #adadad",
+                                        marginBottom: "37px",
+                                    }}>
+                                        <input type="text" placeholder="username" required value={username.value} onChange={username.onChange} 
+                                            style={{
+                                            fontFamily: "Poppins-Regular",
+                                            fontSize: "15px",
+                                            color: "#555555",
+                                            lineHeight: "1.2",
+                                            display: "block",
+                                            width: "100%",
+                                            height: "45px",
+                                            background: "transparent",
+                                            padding: "0 5px",
+                                            outline: "none",
+                                            border: "none",
+                                        }} />
+                                        <span style={{
+                                            position: "absolute",
+                                            display: "block",
+                                            width: "100%",
+                                            height: "100%",
+                                            top: "0",
+                                            left: "0",
+                                            pointerEvents: "none",
+                                        }}>
+                                            Username
+                                        </span>
+                                    </div>
+                                </div>
+                            <div>    
+                            <small>Password</small>
+                                <input type="password" placeholder="password" required value={password.value} onChange={password.onChange} />
                             </div>
-                        </div>
-
-                        <div>    
-                        <small>Password</small>
-                            <input type="password" placeholder="password" required value={password.value} onChange={password.onChange} />
-                        </div>
-                        <small style={{paddingTop: '10px', paddingBottom: '10px'}}>By logging in, you indicate that you have read and agree meta's Terms of Service.</small>
-                        <input type="submit" id="loginSubmit" value="login" disabled={false}/>
-                    </fieldset>
-                </form>
+                            <small style={{paddingTop: '10px', paddingBottom: '10px'}}>By logging in, you indicate that you have read and agree meta's Terms of Service.</small>
+                            <input type="submit" id="loginSubmit" value="login" disabled={false}/>
+                        </fieldset>
+                    </form>
+                </div>
+                
             </div>
         </div>
     )
