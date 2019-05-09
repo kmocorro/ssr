@@ -21,18 +21,35 @@ export default function router(req, res){
 
     return getDashboard()
     .then(response => {
-        const metaDashboard = { data: response.data }
+        const meta_api = { data: response.data }
 
-        const context = {}
-        console.log(metaDashboard);
-        
-        const html = renderToString(
-            <StaticRouter context={context} location={req.url} >
-                <App meta={metaDashboard}/>
-            </StaticRouter>
-        )
+        if(meta_api.code === 1){
 
-        res.status(200).send(renderFullPage(html, metaDashboard));
+            const context = {}
+            console.log(meta_api);
+            
+            const html = renderToString(
+                <StaticRouter context={context} location={req.url} >
+                    <App meta={meta_api}/>
+                </StaticRouter>
+            )
+    
+            res.status(200).send(renderFullPage(html, meta_api));
+
+        } else {
+
+            const context = {}
+            console.log(meta_api);
+            
+            const html = renderToString(
+                <StaticRouter context={context} location={req.url} >
+                    <App meta={meta_api}/>
+                </StaticRouter>
+            )
+
+            res.status(200).send(renderFullPage(html, meta_api));
+            }
+
     })
     .catch(err => res.status(404).send(`${err}: gg sir.`));
     
