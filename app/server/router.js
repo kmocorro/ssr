@@ -66,6 +66,8 @@ export default function router(req, res){
         .catch(err => res.status(404).send(`${err}: gg sir.`));
         
     } else {
+    
+        const context = {}
 
         const html = renderToString(
             <StaticRouter context={context} location={req.url} >
