@@ -19,38 +19,53 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
-    return getDashboard()
-    .then(response => {
-        const meta_api = { data: response.data }
+    function isLoggedIn(){
+        let tokener = getToken();
+        return tokener; //blnk false
+    }
 
-        if(meta_api.data.code === 1){
-
-            const context = {}
-            console.log(meta_api);
-            
-            const html = renderToString(
-                <StaticRouter context={context} location={req.url} >
-                    <App meta={meta_api}/>
-                </StaticRouter>
-            )
-    
-            res.status(200).send(renderFullPage(html, meta_api));
-
-        } else {
-
-            const context = {}
-            console.log(meta_api);
-            
-            const html = renderToString(
-                <StaticRouter context={context} location={req.url} >
-                    <App meta={meta_api}/>
-                </StaticRouter>
-            )
-
-            res.status(200).send(renderFullPage(html, meta_api));
+    function getToken(){
+        if (typeof window !== 'undefined') {
+            return localStorage.getItem('ldap_token');
         }
+    }
 
-    })
-    .catch(err => res.status(404).send(`${err}: gg sir.`));
+    if(isLoggedIn()){
+        return getDashboard()
+        .then(response => {
+            const meta_api = { data: response.data }
+    
+            if(meta_api.data.code === 1){
+    
+                const context = {}
+                console.log(meta_api);
+                
+                const html = renderToString(
+                    <StaticRouter context={context} location={req.url} >
+                        <App meta={meta_api}/>
+                    </StaticRouter>
+                )
+        
+                res.status(200).send(renderFullPage(html, meta_api));
+    
+            } else {
+    
+                const context = {}
+                console.log(meta_api);
+                
+                const html = renderToString(
+                    <StaticRouter context={context} location={req.url} >
+                        <App meta={meta_api}/>
+                    </StaticRouter>
+                )
+    
+                res.status(200).send(renderFullPage(html, meta_api));
+            }
+    
+        })
+        .catch(err => res.status(404).send(`${err}: gg sir.`));
+        
+    }
+
     
 }
