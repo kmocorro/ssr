@@ -4,7 +4,7 @@ import { matchPath, StaticRouter } from 'react-router-dom'
 
 import routes from './routes'
 import renderFullPage from './renderFullPage'
-import getDashboard from '../services/getDashboard'
+//import getDashboard from '../services/getDashboard'
 import App from '../components/App'
 
 import Cookies from 'universal-cookie'
@@ -27,10 +27,8 @@ export default function router(req, res){
 
     console.log(cookie_ldap);
 
-    if(cookie_ldap){
-        console.log('okay loggedin. there\'s token. now what? ');
-        return getDashboard()
-        .then(response => {
+    function getDashboard(){
+        return axios.get(`http://dev-metaspf401.sunpowercorp.com:8080/api/dashboard`, {withCredentials: true}).then(response => {
             const meta_api = { data: response.data }
 
             console.log(meta_api);
@@ -60,9 +58,14 @@ export default function router(req, res){
     
                 res.status(200).send(renderFullPage(html, meta_api));
             }
-    
         })
         .catch(err => res.status(404).send(`${err}: gg sir.`));
+    }
+
+    if(cookie_ldap){
+        console.log('okay loggedin. there\'s token. now what? ');
+        
+        getDashboard();
         
     } else {
         console.log('Cant read token. what\'s happening');
