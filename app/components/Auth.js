@@ -45,7 +45,9 @@ export default () => {
                 let token = res.data.token // api/login return object {token: e...}
                 
                 setToken(token);
-                console.log(token);              
+                console.log(token);
+                
+                location.reload();
 
             }
         })

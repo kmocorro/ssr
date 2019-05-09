@@ -25,14 +25,11 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
-    console.log(cookie_ldap);
-
     if(cookie_ldap){
-        console.log('okay loggedin. there\'s token. now what? ');
         return getDashboard()
         .then(response => {
             const meta_api = { data: response.data }
-            
+
             const context = {}
             console.log(meta_api);
             
@@ -48,9 +45,8 @@ export default function router(req, res){
         .catch(err => res.status(404).send(`${err}: gg sir.`));
         
     } else {
-        console.log('Cant read token. what\'s happening');
-        const context = {}
 
+        const context = {}
         const html = renderToString(
             <StaticRouter context={context} location={req.url} >
                 <App />
