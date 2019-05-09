@@ -22,9 +22,9 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
-    console.log(getToken);
+    console.log(getToken());
 
-    if(getToken){
+    if(getToken()){
         console.log('okay loggedin. there\'s token. now what? ');
         return getDashboard()
         .then(response => {
