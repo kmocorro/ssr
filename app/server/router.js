@@ -32,6 +32,8 @@ export default function router(req, res){
         return getDashboard()
         .then(response => {
             const meta_api = { data: response.data }
+
+            console.log(meta_api);
     
             if(meta_api.data.code === 1){
     
@@ -49,7 +51,6 @@ export default function router(req, res){
             } else {
     
                 const context = {}
-                console.log(meta_api);
                 
                 const html = renderToString(
                     <StaticRouter context={context} location={req.url} >
