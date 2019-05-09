@@ -5,6 +5,6 @@ export default () => {
 
     const cookie_ = cookies.get('ldap_token');
 
-    console.log();
+    console.log(cookie_);
     return cookie_;
 }
