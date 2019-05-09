@@ -5,9 +5,9 @@ import { matchPath, StaticRouter } from 'react-router-dom'
 import routes from './routes'
 import renderFullPage from './renderFullPage'
 import getDashboard from '../services/getDashboard'
+import getToken from '../services/getToken'
 import App from '../components/App'
 
-import Cookies from 'universal-cookie'
 
 export default function router(req, res){
 
@@ -24,18 +24,9 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
-    function isLoggedIn(){
-        let tokener = getToken();
-        console.log(tokener);
-        return tokener; //blnk false
-    }
+    console.log(getToken);
 
-    function getToken(){
-        return cookies.get('ldap_token');
-        
-    }
-
-    if(isLoggedIn()){
+    if(getToken){
         console.log('okay loggedin. there\'s token. now what? ');
         return getDashboard()
         .then(response => {
