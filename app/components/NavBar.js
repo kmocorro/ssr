@@ -53,7 +53,7 @@ export default () => {
                                 listStyle: "none",
                             }}
                         >
-                            <Link to="/logout" style={{
+                            <p style={{
                                 display: "inline-block",
                                 paddingTop: ".3125rem",
                                 paddingBottom: ".3125rem",
@@ -66,7 +66,7 @@ export default () => {
                                 transition: ".35s"
                             }}>
                             admin
-                            </Link>
+                            </p>
                         </li>
                     </ul>
                 </div>
