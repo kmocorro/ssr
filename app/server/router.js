@@ -11,8 +11,6 @@ import App from '../components/App'
 
 export default function router(req, res){
 
-    const cookies = new Cookies();
-
     const match = routes.reduce((acc, route) =>
         matchPath(req.url, {
             path: route,
