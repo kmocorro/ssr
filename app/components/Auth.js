@@ -57,11 +57,11 @@ export default () => {
     }
 
     function setToken(token){
-        localStorage.setItem('ldap_token', token);
+        window.localStorage.setItem('ldap_token', token);
     }
 
     function getToken(){
-        return localStorage.getItem('ldap_token');
+        return window.localStorage.getItem('ldap_token');
         
     }
 
