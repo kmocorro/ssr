@@ -26,6 +26,7 @@ export default function router(req, res){
 
     function isLoggedIn(){
         let tokener = getToken();
+        console.log(tokener);
         return tokener; //blnk false
     }
 
