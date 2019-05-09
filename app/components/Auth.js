@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Cookies from 'universal-cookie';
 
 export default () => {
 
     const username = useCredential();
     const password = useCredential();
+    const cookies = new Cookies();
 
     function useCredential(){
         const [ value, setValue ] = useState('');
@@ -57,11 +59,11 @@ export default () => {
     }
 
     function setToken(token){
-        window.localStorage.setItem('ldap_token', token);
+        cookies.set('ldap_token', token);
     }
 
     function getToken(){
-        return window.localStorage.getItem('ldap_token');
+        return cookies.get('ldap_token');
         
     }
 

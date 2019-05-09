@@ -25,7 +25,8 @@ export default function router(req, res){
     }
 
     function getToken(){
-        return window.localStorage.getItem('ldap_token');
+        return cookies.get('ldap_token');
+        
     }
 
     if(isLoggedIn()){
