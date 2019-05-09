@@ -4,7 +4,9 @@ import { Redirect } from 'react-router-dom';
 export default () => {
 
     function logout(){
-        localStorage.removeItem('ldap_token');
+        if (typeof window !== 'undefined') {
+            localStorage.removeItem('ldap_token');
+        }
     }
 
     logout();

@@ -10,7 +10,9 @@ export default () => {
     }
 
     function getToken(){
-        return localStorage.getItem('ldap_token');
+        if (typeof window !== 'undefined') {
+            return localStorage.getItem('ldap_token');
+        }
     }
 
     return (
