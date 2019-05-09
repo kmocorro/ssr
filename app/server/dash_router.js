@@ -25,7 +25,7 @@ export default function router(req, res){
 
         const html = renderToString(
             <StaticRouter context={context} location={req.url} >
-                <App meta={}/>
+                <App />
             </StaticRouter>
         )
 
