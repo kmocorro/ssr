@@ -18,6 +18,8 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
+    console.log(req.url);
+
     const context = {}
     
     const html = renderToString(
@@ -26,6 +28,6 @@ export default function router(req, res){
         </StaticRouter>
     )
 
-    res.status(200).send(renderFullPage(html, {}));
+    res.status(200).send(renderFullPage(html));
 
 }
