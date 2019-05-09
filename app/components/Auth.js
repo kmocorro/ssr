@@ -76,25 +76,25 @@ export default () => {
 
     return (
         <div>
-            <div className="col-md-3">
+            <div>
                 <form
                     onSubmit={handleLoginSubmit}
                 >   
                     <fieldset>
-                        <div className="form-group">
-                        <div className="col-md-12">
+                        <div>
+                        <div>
                             <h2 style={{textAlign: 'center', padding:'10px'}}>meta/fab4</h2>
                         </div>
-                        <small className="form-text">Username</small>
-                            <input type="text" placeholder="username" className="form-control form-control-sm" required value={username.value} onChange={username.onChange} />
+                        <small>Username</small>
+                            <input type="text" placeholder="username" required value={username.value} onChange={username.onChange} />
                         </div>
 
-                        <div className="form-group">    
-                        <small className="form-text">Password</small>
-                            <input type="password" placeholder="password" className="form-control form-control-sm" required value={password.value} onChange={password.onChange} />
+                        <div>    
+                        <small>Password</small>
+                            <input type="password" placeholder="password" required value={password.value} onChange={password.onChange} />
                         </div>
-                        <small className="form-text text-muted" style={{paddingTop: '10px', paddingBottom: '10px'}}>By logging in, you indicate that you have read and agree meta's Terms of Service.</small>
-                        <input type="submit" id="loginSubmit" value="login" disabled={false} className="btn btn-outline-primary btn-block" />
+                        <small style={{paddingTop: '10px', paddingBottom: '10px'}}>By logging in, you indicate that you have read and agree meta's Terms of Service.</small>
+                        <input type="submit" id="loginSubmit" value="login" disabled={false}/>
                     </fieldset>
                 </form>
             </div>
