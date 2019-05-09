@@ -23,7 +23,7 @@ export default function router(req, res){
     .then(response => {
         const meta_api = { data: response.data }
 
-        if(meta_api.code === 1){
+        if(meta_api.data.code === 1){
 
             const context = {}
             console.log(meta_api);
@@ -48,7 +48,7 @@ export default function router(req, res){
             )
 
             res.status(200).send(renderFullPage(html, meta_api));
-            }
+        }
 
     })
     .catch(err => res.status(404).send(`${err}: gg sir.`));
