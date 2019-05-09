@@ -11,12 +11,6 @@ app.use(cors());
 
 app.use(assets);
 
-app.get('/*', router);
-app.get('/logout', (req, res) => {
-    if (typeof window !== 'undefined') {
-        localStorage.removeItem('ldap_token');
-    }
-    res.status(200).send('You have been logged out.');
-})
+app.get('*', router);
 
 export default app;
