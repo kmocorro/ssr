@@ -67,7 +67,7 @@ export default function router(req, res){
         .catch(err => res.status(404).send(`${err}: gg sir.`));
         
     } else {
-    
+        console.log('Cant read token. what\'s happening');
         const context = {}
 
         const html = renderToString(
