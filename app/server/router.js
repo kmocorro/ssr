@@ -5,11 +5,14 @@ import { matchPath, StaticRouter } from 'react-router-dom'
 import routes from './routes'
 import renderFullPage from './renderFullPage'
 import getDashboard from '../services/getDashboard'
-import getToken from '../services/getToken'
 import App from '../components/App'
 
+import Cookies from 'universal-cookie'
 
 export default function router(req, res){
+
+    const cookies = new Cookies(req.headers.cookie);
+    const cookie_ldap = cookies.get('ldap_token');
 
     const match = routes.reduce((acc, route) =>
         matchPath(req.url, {
@@ -22,9 +25,9 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
-    console.log(getToken());
+    console.log(cookie_ldap);
 
-    if(getToken()){
+    if(cookie_ldap){
         console.log('okay loggedin. there\'s token. now what? ');
         return getDashboard()
         .then(response => {
