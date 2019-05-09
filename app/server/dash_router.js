@@ -19,7 +19,21 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
-    return getDashboard()
+    if(req.url !== '/'){
+        
+        const context = {}
+
+        const html = renderToString(
+            <StaticRouter context={context} location={req.url} >
+                <App meta={}/>
+            </StaticRouter>
+        )
+
+        res.status(200).send(renderFullPage(html, {}));
+
+    } else {
+
+        return getDashboard()
         .then(response => {
             const metaDashboard = { data: response.data }
 
@@ -36,5 +50,8 @@ export default function router(req, res){
             res.status(200).send(renderFullPage(html, metaDashboard));
         })
         .catch(err => res.status(404).send(`${err}: gg sir.`));
+    }
+
+    
 
 }
