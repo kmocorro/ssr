@@ -65,6 +65,15 @@ export default function router(req, res){
         })
         .catch(err => res.status(404).send(`${err}: gg sir.`));
         
+    } else {
+
+        const html = renderToString(
+            <StaticRouter context={context} location={req.url} >
+                <App />
+            </StaticRouter>
+        )
+
+        res.status(200).send(renderFullPage(html, {}));
     }
 
     
