@@ -57,7 +57,7 @@ export default () => {
     }
 
     function setToken(token){
-        cookies.set('ldap_token', token, {path: '*'});
+        cookies.set('ldap_token', token, {path: '/'});
     }
 
     function getToken(){
