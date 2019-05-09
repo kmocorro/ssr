@@ -23,15 +23,16 @@ export default (metaDashboard) => {
             { isLoggedIn()
                 ? 
                 <div>
-                    <Switch>
-                        <Route path="/" exact render={() => <Home {...metaDashboard}/>}/>
-                        <Route path="/uploader/rmp" component={RMP}/>
-                        <Route path="/login" component={Login}/>
-                    </Switch>
+
+                <Auth />
                 </div>
                 : 
                 <div>
-                <Auth />
+                <Switch>
+                    <Route path="/" exact render={() => <Home {...metaDashboard}/>}/>
+                    <Route path="/uploader/rmp" component={RMP}/>
+                    <Route path="/login" component={Login}/>
+                </Switch>
                 </div>
             }
         </div>
