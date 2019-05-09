@@ -1,6 +1,8 @@
 const routes = [
     '/',
-    '/uploader/rmp'
+    '/uploader/rmp',
+    '/login',
+    '/logout'
 ]
 
 export default routes;
