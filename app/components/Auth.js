@@ -72,65 +72,33 @@ export default () => {
 
     return (
         <div style={{
-            fontFamily: "-apple-system, BlinkMacSystemFont, Roboto, sans-serif !important",
-            fontSize: "14px",
-            width: "360px",
-            /* max-height: 100vh; */
-            borderRadius: "5px",
-            whiteSpace: "normal",
-            backgroundColor: "#fff",
-            backgroundColor: "#fff",
-            boxShadow: "0 12px 40px rgba(0, 0, 0, .12)",
-            color: "#46526b",
-            msOverflowStyle: "none",
-            overflowY: "scroll",
         }}>
             <div style={{
-                opacity: "0.9",
-                transition: "opacity 0.3s ease-in 0s",
-                background: "radial-gradient(#40404b, #111118) rgba(34, 34, 40, .94)",
-                position: "fixed",
-                top: "0",
-                bottom: "0",
-                right: "0",
-                left: "0",
-                zIndex: "-1",
-                opacity: "0",
-                transition: "opacity 0.2s ease-in 0.4s"
             }}>
                 <form
                     onSubmit={handleLoginSubmit}
                     style={{
-                        opacity: "1",
-                        WebkitTransform: "translateY(0%) scale(1)",
-                        transform: "translateY(0%) scale(1)",
-                        margin: "0",
-                        padding: "0",
-                        position: "relative",
-                        display: "block",
                     }}
                 >   
                     <fieldset>
                         <div>
                         <div>
-                            <h2 style={{textAlign: 'center', padding:'10px'}}>meta/fab4</h2>
+                            <h2 style={{}}>meta/fab4</h2>
                         </div>
                         <small>Username</small>
                             <div>
-                            <input type="text" placeholder="username" required value={username.value} onChange={username.onChange} style={{
-                                    WebkitAppearance: "none",
-                                    textAlign: "left",
-                                    border: "1px solid #b3bac7",
-                                    marginTop: "-1px",
-                                    fontFamily: "inherit",
-                                    fontSize: "14px",
-                                    color: "#333C4D",
-                                    height: "48px",
-                                    outline: "none",
-                                    paddingLeft: "48px",
-                                    paddingRight: "16px",
-                                    width: "100%",
-                                    transition: "border-color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out"
+                            <input type="text" placeholder="username" required value={username.value} onChange={username.onChange} 
+                                style={{
+                                fontSize: "18px",
+                                padding: "10px 10px 10px 5px",
+                                webkitAppearance: "none",
+                                display: "block",
+                                background: "#fafafa",
+                                color: "#636363",
+                                width: "100%",
+                                border: "none",
+                                borderRadius: "0",
+                                borderBottom: "1px solid #757575",
                             }} />
                             </div>
                         </div>
