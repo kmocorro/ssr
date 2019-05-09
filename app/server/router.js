@@ -7,6 +7,8 @@ import renderFullPage from './renderFullPage'
 //import getDashboard from '../services/getDashboard'
 import App from '../components/App'
 
+import axios from 'axios'
+
 import Cookies from 'universal-cookie'
 
 export default function router(req, res){
