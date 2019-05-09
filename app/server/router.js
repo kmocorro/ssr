@@ -19,47 +19,21 @@ export default function router(req, res){
         res.status(404).send('Page not found.');
     }
 
-    function isLoggedIn(){
-        let tokener = getToken();
-        return tokener; //blnk false
-    }
+    return getDashboard()
+    .then(response => {
+        const metaDashboard = { data: response.data }
 
-    function getToken(){
-        if (typeof window !== 'undefined') {
-            return localStorage.getItem('ldap_token');
-        }
-    }
-
-    if(isLoggedIn()){
-        return getDashboard()
-        .then(response => {
-            const metaDashboard = { data: response.data }
-    
-            const context = {}
-            console.log(metaDashboard);
-            
-            const html = renderToString(
-                <StaticRouter context={context} location={req.url} >
-                    <App meta={metaDashboard}/>
-                </StaticRouter>
-            )
-    
-            res.status(200).send(renderFullPage(html, metaDashboard));
-        })
-        .catch(err => res.status(404).send(`${err}: gg sir.`));
-
-    } else {
         const context = {}
+        console.log(metaDashboard);
         
         const html = renderToString(
             <StaticRouter context={context} location={req.url} >
-                <App />
+                <App meta={metaDashboard}/>
             </StaticRouter>
         )
-        
-        res.status(200).send(renderFullPage(html, {}));
-    }
-    
-    
 
+        res.status(200).send(renderFullPage(html, metaDashboard));
+    })
+    .catch(err => res.status(404).send(`${err}: gg sir.`));
+    
 }
