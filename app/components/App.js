@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-d
 import Home from './Home'
 import Auth from './Auth'
 import RMP from './RMP'
+import Login from './Login'
+import Logout from './Logout'
 
 export default (metaDashboard) => {
     function isLoggedIn(){
@@ -25,6 +27,8 @@ export default (metaDashboard) => {
                     <Switch>
                         <Route path="/" exact render={() => <Home {...metaDashboard}/>}/>
                         <Route path="/uploader/rmp" component={RMP}/>
+                        <Route path="/login" component={Login}/>
+                        <Route path="/logout" component={Logout}/>
                     </Switch>
                 </div>
                 : 
