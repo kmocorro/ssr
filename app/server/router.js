@@ -25,9 +25,7 @@ export default function router(req, res){
     }
 
     function getToken(){
-        if (typeof window !== 'undefined') {
-            return localStorage.getItem('ldap_token');
-        }
+        return localStorage.getItem('ldap_token');
     }
 
     if(isLoggedIn()){

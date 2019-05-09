@@ -45,9 +45,9 @@ export default () => {
                 setToken(token);
                 console.log(token);
                 
-                if (typeof window !== 'undefined') {
-                    window.location.reload(); // uhm...
-                }
+                
+                window.location.reload(); // uhm...
+                
 
             }
         })
@@ -57,16 +57,12 @@ export default () => {
     }
 
     function setToken(token){
-        if (typeof window !== 'undefined') {
-            localStorage.setItem('ldap_token', token);
-        }
-        
+        localStorage.setItem('ldap_token', token);
     }
 
     function getToken(){
-        if (typeof window !== 'undefined') {
-            return localStorage.getItem('ldap_token');
-        }
+        return localStorage.getItem('ldap_token');
+        
     }
 
     function loggedIn(){
