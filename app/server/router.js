@@ -24,6 +24,7 @@ export default function router(req, res){
         const metaDashboard = { data: response.data }
 
         const context = {}
+        console.log(metaDashboard);
         
         const html = renderToString(
             <StaticRouter context={context} location={req.url} >
