@@ -31,6 +31,7 @@ export default function router(req, res){
     }
 
     if(isLoggedIn()){
+        console.log('okay loggedin. there\'s token. now what? ');
         return getDashboard()
         .then(response => {
             const meta_api = { data: response.data }
