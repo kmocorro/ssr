@@ -7,7 +7,12 @@ import renderFullPage from './renderFullPage'
 import getDashboard from '../services/getDashboard'
 import App from '../components/App'
 
+import Cookies from 'universal-cookie'
+
 export default function router(req, res){
+
+    const cookies = new Cookies();
+
     const match = routes.reduce((acc, route) =>
         matchPath(req.url, {
             path: route,
