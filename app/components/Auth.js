@@ -134,7 +134,7 @@ export default () => {
                             </div>
                             <small style={{paddingTop: '10px', paddingBottom: '10px'}}>By logging in, you indicate that you have read and agree meta's Terms of Service.</small>
                             <div>
-                                <input type="submit" id="loginSubmit" value="login" disabled={false} syle={{
+                                <input type="submit" id="loginSubmit" value="login" disabled={false} style={{
                                     display: "inline-flex",
                                     verticalAlign: "middle",
                                     WebkitBoxAlign: "center",
