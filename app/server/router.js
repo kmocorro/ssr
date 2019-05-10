@@ -9,7 +9,9 @@ import App from '../components/App'
 
 export default function router(req, res){
 
-    let cookie_ldap = req.universalCookies.get('myCat');
+    let cookie_ldap = req.universalCookies.get('ldap_token');
+
+    console.log(cookie_ldap);
 
     const match = routes.reduce((acc, route) =>
         matchPath(req.url, {
