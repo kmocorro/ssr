@@ -25,8 +25,8 @@ export default function router(req, res){
 
     if(cookie_ldap){
         
-        return getDashboard(cookie_ldap).then((dashboard) => {
-            return getRMP(cookie_ldap).then((rmp) => {
+        getDashboard(cookie_ldap).then((dashboard) => {
+            getRMP(cookie_ldap).then((rmp) => {
                 const dboard = dashboard.data;
                 const rmp_ = rmp.data;
 
