@@ -11,8 +11,6 @@ export default function router(req, res){
 
     let cookie_ldap = req.universalCookies.get('ldap_token');
 
-    console.log(cookie_ldap);
-
     const match = routes.reduce((acc, route) =>
         matchPath(req.url, {
             path: route,
@@ -25,8 +23,6 @@ export default function router(req, res){
     }
 
     if(cookie_ldap){
-
-        console.log(cookie_ldap);
         
         return getDashboard()
         .then(response => {
