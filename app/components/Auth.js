@@ -120,37 +120,10 @@ export default () => {
                                 </div>
                                 <small>Username</small>
                                     <div style={{
-                                        position: "relative",
-                                        width: "100%",
-                                        position: "relative",
-                                        borderBottom: "2px solid #adadad",
-                                        marginBottom: "37px",
                                     }}>
                                         <input type="text" placeholder="username" required value={username.value} onChange={username.onChange} 
                                             style={{
-                                            fontFamily: "Poppins-Regular",
-                                            fontSize: "15px",
-                                            color: "#555555",
-                                            lineHeight: "1.2",
-                                            display: "block",
-                                            width: "100%",
-                                            height: "45px",
-                                            background: "transparent",
-                                            padding: "0 5px",
-                                            outline: "none",
-                                            border: "none",
                                         }} />
-                                        <span style={{
-                                            position: "absolute",
-                                            display: "block",
-                                            width: "100%",
-                                            height: "100%",
-                                            top: "0",
-                                            left: "0",
-                                            pointerEvents: "none",
-                                        }}>
-                                            Username
-                                        </span>
                                     </div>
                                 </div>
                             <div>    
