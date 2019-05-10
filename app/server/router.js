@@ -25,45 +25,22 @@ export default function router(req, res){
 
     if(cookie_ldap){
         
-        if(req.url === '/'){
-            return getDashboard(cookie_ldap)
-            .then(response => {
-                const meta_api = { data: response.data }
-    
-                const context = {}
-                console.log(meta_api);
+        return getDashboard(cookie_ldap).then((dashboard) => {
+            return getRMP(cookie_ldap).then((rmp) => {
+                const apiResponse = { data: {...dashboard, ...rmp} }
+                const context = {};
+
+                console.log(apiResponse);
                 
                 const html = renderToString(
                     <StaticRouter context={context} location={req.url} >
-                        <App meta={meta_api}/>
+                        <App meta={apiResponse}/>
                     </StaticRouter>
                 )
-        
-                res.status(200).send(renderFullPage(html, meta_api));
-    
-            })
-            .catch(err => res.status(404).send(`${err}: gg sir.`));
+                res.status(200).send(renderFullPage(html, apiResponse));
+            }).catch(err => res.status(404).send(`${err}: gg sir.`));
+        }).catch(err => res.status(404).send(`${err}: gg sir.`));
 
-        } else if(req.url === '/uploader/rmp'){
-            return getRMP(cookie_ldap)
-            .then(response => {
-                const meta_api = { data: response.data }
-
-                const context = {}
-                console.log(meta_api);
-                
-                const html = renderToString(
-                    <StaticRouter context={context} location={req.url} >
-                        <App meta={meta_api}/>
-                    </StaticRouter>
-                )
-        
-                res.status(200).send(renderFullPage(html, meta_api));
-
-            })
-            .catch(err => res.status(404).send(`${err}: gg sir.`));
-        }
-        
         
     } else {
 
