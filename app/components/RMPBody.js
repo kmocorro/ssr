@@ -21,7 +21,6 @@ export default (metaDashboard) => {
             setSelectedFile(e.target.files[0].name);
         } else {
             setSelectedFile(null);
-            setFile(null);
         }
         
     }
