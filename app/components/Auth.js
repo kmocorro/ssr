@@ -131,7 +131,12 @@ export default () => {
                                     <input type="password" placeholder="password" required value={password.value} onChange={password.onChange} />
                                 </div>
                             </div>
-                            <small style={{paddingTop: '10px', paddingBottom: '10px'}}>By logging in, you indicate that you have read and agree meta's Terms of Service.</small>
+                            <small style={{
+                                paddingTop: '10px',
+                                paddingBottom: '10px',
+                                opacity: "0.5"
+                            }}>By logging in, you indicate that you have read and agree meta's Terms of Service.
+                            </small>
                             <div>
                                 <input type="submit" id="loginSubmit" value="login" disabled={false} style={{
                                     display: "inline-flex",
@@ -141,8 +146,8 @@ export default () => {
                                     WebkitBoxPack: "center",
                                     justifyContent: "center",
                                     minWidth: "96px",
-                                    minHeight: "48px",
-                                    lineHeight: "48px",
+                                    minHeight: "38px",
+                                    lineHeight: "38px",
                                     marginTop: "0px",
                                     marginLeft: "0px",
                                     textTransform: "uppercase",
