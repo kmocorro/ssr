@@ -26,7 +26,6 @@ export default (metaDashboard) => {
     }
 
     function onClickFileUpload(e){
-        setFile(null);
         setResponseFromUpload(null);
         setOkResponseFromUpload(null);
         setErrResponseFromUpload(null);
@@ -61,6 +60,7 @@ export default (metaDashboard) => {
     
                 setLoadingBar(true);
                 setSelectSubmit(false);
+                setFile(null);
                 
             });
         }
