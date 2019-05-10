@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
  
 export default (metaDashboard) => {
 
-    const metaDashboard_props = metaDashboard.metaDashboard.meta.data;
+    const metaDashboard_props = metaDashboard.metaDashboard.meta;
 
     const token_claim = {
         employeeNumber: metaDashboard_props.claim.employeeNumber,
