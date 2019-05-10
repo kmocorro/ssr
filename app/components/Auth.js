@@ -128,10 +128,43 @@ export default () => {
                                 </div>
                             <div>    
                             <small>Password</small>
-                                <input type="password" placeholder="password" required value={password.value} onChange={password.onChange} />
+                                <div>
+                                    <input type="password" placeholder="password" required value={password.value} onChange={password.onChange} />
+                                </div>
                             </div>
                             <small style={{paddingTop: '10px', paddingBottom: '10px'}}>By logging in, you indicate that you have read and agree meta's Terms of Service.</small>
-                            <input type="submit" id="loginSubmit" value="login" disabled={false}/>
+                            <div>
+                                <input type="submit" id="loginSubmit" value="login" disabled={false} syle={{
+                                    display: "inline-flex",
+                                    verticalAlign: "middle",
+                                    WebkitBoxAlign: "center",
+                                    alignItems: "center",
+                                    WebkitBoxPack: "center",
+                                    justifyContent: "center",
+                                    minWidth: "96px",
+                                    minHeight: "48px",
+                                    lineHeight: "48px",
+                                    marginTop: "0px",
+                                    marginLeft: "0px",
+                                    textTransform: "uppercase",
+                                    whiteSpace: "nowrap",
+                                    letterSpacing: "1px",
+                                    fontSize: "12px",
+                                    fontWeight: "500",
+                                    color: "rgb(250, 250, 250)",
+                                    opacity: "1",
+                                    cursor: "pointer",
+                                    background: "rgb(200, 200, 200)",
+                                    borderWidth: "1px",
+                                    borderStyle: "solid",
+                                    borderColor: "rgb(240, 240, 240)",
+                                    borderImage: "initial",
+                                    borderRadius: "3px",
+                                    padding: "0px 24px",
+                                    transition: "border-color 0.25s ease 0s, background 0.25s ease 0s",
+                                }}/>
+                            </div>
+                            
                         </fieldset>
                     </form>
                 </div>
