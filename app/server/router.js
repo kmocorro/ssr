@@ -27,7 +27,10 @@ export default function router(req, res){
         
         return getDashboard(cookie_ldap).then((dashboard) => {
             return getRMP(cookie_ldap).then((rmp) => {
-                const apiResponse = { data: {...dashboard.data, ...rmp.data} }
+                const dboard = dashboard.data;
+                const rmp_ = rmp.data;
+
+                const apiResponse = Object.assign(dboard, rmp_);
                 const context = {};
 
                 console.log(apiResponse);
