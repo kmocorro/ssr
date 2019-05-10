@@ -20,7 +20,7 @@ export default (metaDashboard) => {
         if(e.target.files[0]){
             setSelectedFile(e.target.files[0].name);
         } else {
-            setSelectedFile('');
+            setSelectedFile(null);
         }
         
     }
