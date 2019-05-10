@@ -22,7 +22,6 @@ export default (metaDashboard) => {
                     gridTemplateColumns: "1fr",
                     gap: "10px 10px",
                 }}>
-                    
                     <div id="barHeader" style={{
                         display: "flex",
                         WebkitBoxPack: "justify",
@@ -115,7 +114,7 @@ export default (metaDashboard) => {
                                     display: "flex",
                                     flexDirection: "row",
                                     WebkitBoxPack: "center",
-                                    justifyContent: "center",
+                                    justifyContent: "left",
                                     WebkitBoxFlex: "1",
                                     flexGrow: "1",
                                     minHeight: "84px",
