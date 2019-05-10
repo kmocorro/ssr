@@ -43,26 +43,29 @@ export default (metaDashboard) => {
         setLoadingBar(false);
         setSelectSubmit(true);
 
-        uploadFile(file).then((res) => {
+        if(file){
+            uploadFile(file).then((res) => {
 
-            if(res.data.OK.length > 0){
-                setOkResponseFromUpload(res.data.OK);
-            }
-            if(res.data.ERR.length > 0){
-                setErrResponseFromUpload(res.data.ERR);
-            }
-            if(res.data.OK.length > 0 && res.data.ERR.length === 0){
-                setResponseFromUpload('All worksheets has been uploaded.');
-
-            } else if(res.data.OK.length > 0 && res.data.ERR.length > 1) {
-                setResponseFromUpload('Warning! Some worksheets was not uploaded.');
-            }
-
-
-            setLoadingBar(true);
-            setSelectSubmit(false);
-            
-        });
+                if(res.data.OK.length > 0){
+                    setOkResponseFromUpload(res.data.OK);
+                }
+                if(res.data.ERR.length > 0){
+                    setErrResponseFromUpload(res.data.ERR);
+                }
+                if(res.data.OK.length > 0 && res.data.ERR.length === 0){
+                    setResponseFromUpload('All worksheets has been uploaded.');
+    
+                } else if(res.data.OK.length > 0 && res.data.ERR.length > 1) {
+                    setResponseFromUpload('Warning! Some worksheets was not uploaded.');
+                }
+    
+    
+                setLoadingBar(true);
+                setSelectSubmit(false);
+                
+            });
+        }
+        
     }
 
     function uploadFile(file){
