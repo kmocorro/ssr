@@ -21,7 +21,7 @@ export default (metaDashboard) => {
                 paddingTop: "41px",
                 margin: "0px auto",
             }}>
-                <NavBar/>
+                <NavBar metaDashboard={metaDashboard}/>
                 <SideBar/>
                 <DashboardBody metaDashboard={metaDashboard} />
             </div>

@@ -9,7 +9,6 @@ export default (metaDashboard) => {
     const binNE = metaDashboard_props.dashboard[1].value;
     const cosmetics = metaDashboard_props.dashboard[2].value;
     const cycletime = metaDashboard_props.dashboard[3].value;
-    
 
     return (
         <div style={{

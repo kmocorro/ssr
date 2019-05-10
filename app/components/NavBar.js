@@ -1,8 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
  
-export default () => {
+export default (metaDashboard) => {
 
+    const metaDashboard_props = metaDashboard.metaDashboard.meta.data;
+
+    const token_claim = {
+        employeeNumber: metaDashboard_props.claim.employeeNumber,
+        nickName: metaDashboard_props.claim.nickName,
+        displayName: metaDashboard_props.claim.displayName,
+        title: metaDashboard_props.claim.title,
+        department: metaDashboard_props.claim.department,
+        username: metaDashboard_props.claim.username,
+    }
+    
     return (
         <div style={{
             height: "69px",
@@ -65,7 +76,7 @@ export default () => {
                                 textDecoration: "none",
                                 transition: ".35s"
                             }}>
-                            admin
+                            {token_claim.nickName}
                             </p>
                         </li>
                     </ul>
