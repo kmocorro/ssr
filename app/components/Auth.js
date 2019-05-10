@@ -110,7 +110,6 @@ export default () => {
                                 <div>
                                     <h2 style={{
                                         display: "block",
-                                        fontFamily: "Poppins-Bold",
                                         fontSize: "30px",
                                         color: "#333333",
                                         lineHeight: "1.2",
@@ -154,10 +153,10 @@ export default () => {
                                     color: "rgb(250, 250, 250)",
                                     opacity: "1",
                                     cursor: "pointer",
-                                    background: "rgb(200, 200, 200)",
+                                    background: "rgb(235, 84, 36)",
                                     borderWidth: "1px",
                                     borderStyle: "solid",
-                                    borderColor: "rgb(240, 240, 240)",
+                                    borderColor: "rgb(235, 84, 36)",
                                     borderImage: "initial",
                                     borderRadius: "3px",
                                     padding: "0px 24px",
