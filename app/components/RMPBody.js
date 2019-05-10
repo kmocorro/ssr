@@ -291,11 +291,21 @@ export default (metaDashboard) => {
                                     borderTop: "1px solid rgb(241, 241, 241)",
                                 }}>
                                     <div>
+                                        <p style={{
+                                            display: "block",
+                                            textTransform: "uppercase",
+                                            fontSize: "12px",
+                                            letterSpacing: "1px",
+                                        }}>RMP Upload History</p>
+                                        <ul style={{
+                                            listStyle: "none"
+                                        }}>
                                         {
                                             metaDashboard_props.rmp.rmp_logs.map(rmp => (
-                                                <p key={rmp.id}>{rmp.worksheet_name}</p>
+                                                <li key={rmp.id}>{rmp.upload_date} - {rmp.worksheet_name} - {rmp.username}</li>
                                             ))
                                         }
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
