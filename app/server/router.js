@@ -5,6 +5,7 @@ import { matchPath, StaticRouter } from 'react-router-dom'
 import routes from './routes'
 import renderFullPage from './renderFullPage'
 import getDashboard from '../services/getDashboard'
+import getRMP from '../services/getRMP'
 import App from '../components/App'
 
 export default function router(req, res){
@@ -23,24 +24,46 @@ export default function router(req, res){
     }
 
     if(cookie_ldap){
-
-        return getDashboard(cookie_ldap)
-        .then(response => {
-            const meta_api = { data: response.data }
-
-            const context = {}
-            console.log(meta_api);
-            
-            const html = renderToString(
-                <StaticRouter context={context} location={req.url} >
-                    <App meta={meta_api}/>
-                </StaticRouter>
-            )
+        
+        if(req.url === '/'){
+            return getDashboard(cookie_ldap)
+            .then(response => {
+                const meta_api = { data: response.data }
     
-            res.status(200).send(renderFullPage(html, meta_api));
+                const context = {}
+                console.log(meta_api);
+                
+                const html = renderToString(
+                    <StaticRouter context={context} location={req.url} >
+                        <App meta={meta_api}/>
+                    </StaticRouter>
+                )
+        
+                res.status(200).send(renderFullPage(html, meta_api));
+    
+            })
+            .catch(err => res.status(404).send(`${err}: gg sir.`));
 
-        })
-        .catch(err => res.status(404).send(`${err}: gg sir.`));
+        } else if(req.url === '/uploader/rmp'){
+            return getRMP(cookie_ldap)
+            .then(response => {
+                const meta_api = { data: response.data }
+
+                const context = {}
+                console.log(meta_api);
+                
+                const html = renderToString(
+                    <StaticRouter context={context} location={req.url} >
+                        <App meta={meta_api}/>
+                    </StaticRouter>
+                )
+        
+                res.status(200).send(renderFullPage(html, meta_api));
+
+            })
+            .catch(err => res.status(404).send(`${err}: gg sir.`));
+        }
+        
         
     } else {
 
