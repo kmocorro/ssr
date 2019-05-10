@@ -60,7 +60,6 @@ export default (metaDashboard) => {
     
                 setLoadingBar(true);
                 setSelectSubmit(false);
-                setFile(null);
                 
             });
         }
