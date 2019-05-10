@@ -296,6 +296,7 @@ export default (metaDashboard) => {
                                             textTransform: "uppercase",
                                             fontSize: "12px",
                                             letterSpacing: "1px",
+                                            marginBottom: "20px",
                                         }}>RMP Upload History</p>
                                         <ul style={{
                                             listStyle: "none"
