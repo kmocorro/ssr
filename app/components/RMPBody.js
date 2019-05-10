@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export default () => {
+export default (metaDashboard) => {
 
     const [ file, setFile ] = useState(null);
     const [ selectedFile, setSelectedFile ] = useState(null);
@@ -10,6 +10,9 @@ export default () => {
     const [ errResponseFromUpload, setErrResponseFromUpload ] = useState(null);
     const [ loadingBar, setLoadingBar ] = useState(true);
     const [ selectSubmit, setSelectSubmit ] = useState(false);
+
+    const metaDashboard_props = metaDashboard.metaDashboard.meta;
+    
 
     function handleFileChange(e){
         setFile(e.target.files[0]);
@@ -256,6 +259,44 @@ export default () => {
                                         </div>
                                     </form>
                                     
+                                </div>
+                            </div>
+                        </div>
+                        <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            WebkitBoxPack: "start",
+                            justifyContent: "flex-start",
+                        }}>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                WebkitBoxFlex: "1",
+                                flexGrow: "1",
+                                minHeight: "134px",
+                            }}>
+                                <div style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    WebkitBoxPack: "center",
+                                    justifyContent: "left",
+                                    WebkitBoxFlex: "1",
+                                    flexGrow: "1",
+                                    minHeight: "84px",
+                                    textAlign: "left",
+                                    fontSize: "16px",
+                                    color: "rgb(102, 102, 102)",
+                                    marginTop: "20px",
+                                    padding: "14px 0px",
+                                    borderTop: "1px solid rgb(241, 241, 241)",
+                                }}>
+                                    <div>
+                                        {
+                                            metaDashboard_props.rmp.rmp_logs.map(rmp => (
+                                                <p key={rmp.id}>{rmp.worksheet_name}</p>
+                                            ))
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         </div>

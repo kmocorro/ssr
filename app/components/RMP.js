@@ -23,7 +23,7 @@ export default (metaDashboard) => {
             }}>
                 <NavBar metaDashboard={metaDashboard}/>
                 <SideBar/>
-                <RMPBody/>
+                <RMPBody metaDashboard={metaDashboard}/>
             </div>
         </div>
     )
