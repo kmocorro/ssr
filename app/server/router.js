@@ -23,7 +23,7 @@ export default function router(req, res){
     }
 
     if(cookie_ldap){
-        
+        res.setHeader('Set-Cookie', [`ldap_token=${cookie_ldap}`]);
         return getDashboard()
         .then(response => {
             const meta_api = { data: response.data }
