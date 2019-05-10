@@ -263,13 +263,6 @@ export default (metaDashboard) => {
                                     
                                 </div>
                             </div>
-                        </div>
-                        <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            WebkitBoxPack: "start",
-                            justifyContent: "flex-start",
-                        }}>
                             <div style={{
                                 display: "flex",
                                 flexDirection: "row",
