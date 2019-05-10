@@ -3,7 +3,7 @@ import SideBar from './SideBar'
 import NavBar from './NavBar'
 import RMPBody from './RMPBody'
 
-export default () => {
+export default (metaDashboard) => {
 
     return (
         <div style={{
@@ -21,7 +21,7 @@ export default () => {
                 paddingTop: "41px",
                 margin: "0px auto",
             }}>
-                <NavBar/>
+                <NavBar metaDashboard={metaDashboard}/>
                 <SideBar/>
                 <RMPBody/>
             </div>

@@ -20,7 +20,7 @@ export default (metaDashboard) => {
                 <div>
                 <Switch>
                     <Route path="/" exact render={() => <Home {...metaDashboard}/>}/>
-                    <Route path="/uploader/rmp" component={RMP}/>
+                    <Route path="/uploader/rmp" render={() => <RMP {...metaDashboard}/>}/>
                     <Route path="/login" component={Login}/>
                 </Switch>
                 </div>
