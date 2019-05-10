@@ -7,12 +7,9 @@ import renderFullPage from './renderFullPage'
 import getDashboard from '../services/getDashboard'
 import App from '../components/App'
 
-import Cookies from 'universal-cookie'
-
 export default function router(req, res){
 
-    const cookies = new Cookies(req.headers.cookie);
-    const cookie_ldap = cookies.get('ldap_token');
+    let cookie_ldap = req.universalCookies.get('myCat');
 
     const match = routes.reduce((acc, route) =>
         matchPath(req.url, {
@@ -26,6 +23,8 @@ export default function router(req, res){
     }
 
     if(cookie_ldap){
+
+        console.log(cookie_ldap);
         
         return getDashboard()
         .then(response => {
