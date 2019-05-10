@@ -26,9 +26,8 @@ export default function router(req, res){
     }
 
     if(cookie_ldap){
-        let cookie_json = {cookie: cookie_ldap};
         
-        return getDashboard(cookie_json)
+        return getDashboard()
         .then(response => {
             const meta_api = { data: response.data }
 
