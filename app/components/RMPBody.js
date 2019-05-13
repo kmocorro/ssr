@@ -144,6 +144,7 @@ export default (metaDashboard) => {
                                     WebkitBoxFlex: "1",
                                     flexGrow: "1",
                                     minHeight: "84px",
+                                    minWidth: "300px",
                                     textAlign: "left",
                                     fontSize: "16px",
                                     color: "rgb(102, 102, 102)",
@@ -295,7 +296,7 @@ export default (metaDashboard) => {
                                         }
                                         </ul>
                                     </div>
-                                    
+
                                 </div>
 
                             </div>
