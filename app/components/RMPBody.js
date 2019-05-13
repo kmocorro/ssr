@@ -260,6 +260,23 @@ export default (metaDashboard) => {
                                             </div>
                                         </div>
                                     </form>
+                                    
+                                </div>
+                                <div style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    WebkitBoxPack: "center",
+                                    justifyContent: "left",
+                                    WebkitBoxFlex: "1",
+                                    flexGrow: "1",
+                                    minHeight: "84px",
+                                    textAlign: "left",
+                                    fontSize: "16px",
+                                    color: "rgb(102, 102, 102)",
+                                    marginTop: "20px",
+                                    padding: "14px 0px",
+                                    borderTop: "1px solid rgb(241, 241, 241)",
+                                }}>
                                     <div>
                                         <p style={{
                                             display: "block",
@@ -280,6 +297,7 @@ export default (metaDashboard) => {
                                     </div>
                                     
                                 </div>
+
                             </div>
                             
                         </div>
