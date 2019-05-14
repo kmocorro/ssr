@@ -257,14 +257,26 @@ export default (metaDashboard) => {
                                         }}>
                                         {cycletime}
                                         </strong>
-                                        <span style={{
-                                            color:"red",
-                                            display: "block",
-                                            fontSize: "12px",
-                                            fontWeight: "400"
-                                            }}>
-                                            ↑ {percentChange_cycletime} day
-                                        </span>
+                                        {
+                                            percentChange_cycletime > 0.0 ?
+                                            <span style={{
+                                                color:"green",
+                                                display: "block",
+                                                fontSize: "12px",
+                                                fontWeight: "400"
+                                                }}>
+                                                ↓ {percentChange_cycletime} day
+                                            </span>
+                                            :
+                                            <span style={{
+                                                color:"red",
+                                                display: "block",
+                                                fontSize: "12px",
+                                                fontWeight: "400"
+                                                }}>
+                                                ↑ {percentChange_cycletime} day
+                                            </span>
+                                        }
                                         <small style={{
                                             opacity: "0.6",
                                             display: "block",
