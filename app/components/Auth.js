@@ -145,19 +145,19 @@ export default () => {
                                 </div>
                                 <small>Username</small>
                                     <div style={{
-                                        display: "block",
-                                        margin: "0",
-                                        padding: "0 1em 0",
-                                        border: "solid 2px black",
-                                        borderRadius: "4px", 
-                                        WebkitAppearance: "none",
-                                        boxSizing: "border-box",
-                                        width: "100%", height: "65px",
-                                        fontSize:" 1.55em, color: #353538", fontWeight: "600", fontFamily: "inherit",
-                                        transition: "box-shadow .2s linear, border-color .25s ease-out",
                                     }}>
                                         <input type="text" required value={username.value} onChange={username.onChange} onClick={handleOnClick}
                                             style={{
+                                                display: "block",
+                                                margin: "0",
+                                                padding: "0 1em 0",
+                                                border: "solid 2px black",
+                                                borderRadius: "4px", 
+                                                WebkitAppearance: "none",
+                                                boxSizing: "border-box",
+                                                width: "100%", height: "65px",
+                                                fontSize:" 1.55em, color: #353538", fontWeight: "600", fontFamily: "inherit",
+                                                transition: "box-shadow .2s linear, border-color .25s ease-out",
                                         }} />
                                     </div>
                                 </div>
