@@ -26,7 +26,7 @@ export default () => {
 
     function handleLoginSubmit(e){
         e.preventDefault();
-        document.getElementById('loginSubmit').disabled = true;
+        document.getElementById('loginSubmit').style.display = "none";
         
         setLoginResponse(null);
 
@@ -40,6 +40,13 @@ export default () => {
             console.log(getToken());
         }
         
+    }
+
+    function handleOnClick(e){
+
+        setLoginResponse(null);
+        document.getElementById('loginSubmit').style.display = "contents";
+
     }
 
     function login(credentials){
@@ -140,7 +147,7 @@ export default () => {
                                 <small>Username</small>
                                     <div style={{
                                     }}>
-                                        <input type="text" required value={username.value} onChange={username.onChange} 
+                                        <input type="text" required value={username.value} onChange={username.onChange} onClick={handleOnClick}
                                             style={{
                                         }} />
                                     </div>
@@ -148,7 +155,7 @@ export default () => {
                             <div>    
                             <small>Password</small>
                                 <div>
-                                    <input type="password" required value={password.value} onChange={password.onChange} />
+                                    <input type="password" required value={password.value} onChange={password.onChange}  onClick={handleOnClick} />
                                 </div>
                             </div>
 
