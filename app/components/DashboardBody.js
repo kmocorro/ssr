@@ -9,6 +9,7 @@ export default (metaDashboard) => {
     const binNE = metaDashboard_props.dashboard.dash[1].value;
     const cosmetics = metaDashboard_props.dashboard.dash[2].value;
     const cycletime = metaDashboard_props.dashboard.dash[3].value;
+    const percentChange_cycletime = ((metaDashboard_props.dashboard.dash[3].old_value - metaDashboard_props.dashboard.dash[3].value)/metaDashboard_props.dashboard.dash[3].old_value)*100;
 
     return (
         <div style={{
@@ -262,7 +263,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             fontWeight: "400"
                                             }}>
-                                            ↑ 0.42 day
+                                            ↑ {percentChange_cycletime} day
                                         </span>
                                         <small style={{
                                             opacity: "0.6",

@@ -289,7 +289,7 @@ export default (metaDashboard) => {
                                         <ul style={{
                                             listStyle: "none"
                                         }}>
-                                        {
+                                        {   
                                             metaDashboard_props.rmp.rmp_logs.map(rmp => (
                                                 <li key={rmp.id}>{rmp.upload_date} - {rmp.worksheet_name} - {rmp.username}</li>
                                             ))
