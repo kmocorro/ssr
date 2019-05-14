@@ -86,7 +86,7 @@ export default () => {
         }}>
             <div style={{
                 width: "100%",
-                minHeight: "100vh",
+                minHeight: "50vh",
                 display: "-webkit-box",
                 display: "-webkit-flex",
                 display: "-moz-box",
@@ -129,7 +129,7 @@ export default () => {
                                 <small>Username</small>
                                     <div style={{
                                     }}>
-                                        <input type="text" placeholder="username" required value={username.value} onChange={username.onChange} 
+                                        <input type="text" required value={username.value} onChange={username.onChange} 
                                             style={{
                                         }} />
                                     </div>
@@ -137,7 +137,7 @@ export default () => {
                             <div>    
                             <small>Password</small>
                                 <div>
-                                    <input type="password" placeholder="password" required value={password.value} onChange={password.onChange} />
+                                    <input type="password" required value={password.value} onChange={password.onChange} />
                                 </div>
                             </div>
                             <small style={{
@@ -145,7 +145,9 @@ export default () => {
                                 opacity: "0.5"
                             }}>By logging in, you indicate that you have read and agree meta's Terms of Service.
                             </small>
-                            <div>
+                            <div style={{
+                                width:"100%"
+                            }}>
                                 <input type="submit" id="loginSubmit" value="login" disabled={false} style={{
                                     display: "inline-flex",
                                     verticalAlign: "middle",
@@ -153,7 +155,7 @@ export default () => {
                                     alignItems: "center",
                                     WebkitBoxPack: "center",
                                     justifyContent: "center",
-                                    minWidth: "96px",
+                                    width: "100%",
                                     minHeight: "38px",
                                     lineHeight: "38px",
                                     marginTop: "0px",
