@@ -27,6 +27,8 @@ export default () => {
     function handleLoginSubmit(e){
         e.preventDefault();
         document.getElementById('loginSubmit').disabled = true;
+        
+        setLoginResponse(null);
 
         if(!loggedIn()){
             let credentials = {username: username.value, password: password.value};
@@ -54,7 +56,7 @@ export default () => {
                     location.reload();
                 } else {
 
-                    location.reload();
+                    setLoginResponse(res.data);
 
                 }
 
@@ -140,11 +142,15 @@ export default () => {
                                     <input type="password" required value={password.value} onChange={password.onChange} />
                                 </div>
                             </div>
-                            <small style={{
+
+                            <div style={{
                                 margin: '10px',
                                 opacity: "0.5"
-                            }}>By logging in, you indicate that you have read and agree meta's Terms of Service.
-                            </small>
+                            }}>
+                                <small>By logging in, you indicate that you have read and agree meta's Terms of Service.
+                                </small>
+                            </div>
+                            
                             <div style={{
                                 width:"100%"
                             }}>
