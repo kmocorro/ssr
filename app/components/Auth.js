@@ -55,7 +55,8 @@ export default () => {
                     
                     location.reload();
                 } else {
-                    console.log(token);
+                    
+                    setLoginResponse('Invalid username/password')
 
                 }
 
