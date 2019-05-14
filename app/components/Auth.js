@@ -151,12 +151,15 @@ export default () => {
                                                 display: "block",
                                                 margin: "0",
                                                 padding: "0 1em 0",
-                                                border: "solid 2px black",
-                                                borderRadius: "4px", 
+                                                border: "2px solid #fff ",
+                                                borderBottom: "1px solid #eb5424",
                                                 WebkitAppearance: "none",
                                                 boxSizing: "border-box",
                                                 width: "100%", height: "65px",
-                                                fontSize:" 1.55em, color: #353538", fontWeight: "600", fontFamily: "inherit",
+                                                fontSize:"20px",
+                                                fontWeight: "400",
+                                                fontFamily: "inherit",
+                                                outlineStyle: "none",
                                                 transition: "box-shadow .2s linear, border-color .25s ease-out",
                                         }} />
                                     </div>
