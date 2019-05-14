@@ -9,7 +9,7 @@ export default (metaDashboard) => {
     const binNE = metaDashboard_props.dashboard.dash[1].value;
     const cosmetics = metaDashboard_props.dashboard.dash[2].value;
     const cycletime = metaDashboard_props.dashboard.dash[3].value;
-    const percentChange_cycletime = ((metaDashboard_props.dashboard.dash[3].old_value - metaDashboard_props.dashboard.dash[3].value)/metaDashboard_props.dashboard.dash[3].old_value)*100;
+    const percentChange_cycletime = ((metaDashboard_props.dashboard.dash[3].old_value - metaDashboard_props.dashboard.dash[3].value)).toFixed(2);
 
     return (
         <div style={{
