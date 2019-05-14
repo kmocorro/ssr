@@ -150,10 +150,10 @@ export default () => {
                                         padding: "0 1em 0",
                                         border: "solid 2px black",
                                         borderRadius: "4px", 
-                                        webkitAppearance: "none",
+                                        WebkitAppearance: "none",
                                         boxSizing: "border-box",
                                         width: "100%", height: "65px",
-                                        fontSize:" 1.55em, color: #353538, font-weight: 600, font-family: inherit",
+                                        fontSize:" 1.55em, color: #353538", fontWeight: "600", fontFamily: "inherit",
                                         transition: "box-shadow .2s linear, border-color .25s ease-out",
                                     }}>
                                         <input type="text" required value={username.value} onChange={username.onChange} onClick={handleOnClick}
