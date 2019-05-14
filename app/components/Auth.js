@@ -128,6 +128,15 @@ export default () => {
                                         paddingBottom: "26px",
                                     }}>meta/fab4</h2>
                                 </div>
+                                <div style={{
+                                    display: "block",
+                                }}>
+                                    {
+                                        loginResponse ?
+                                        <span>{loginResponse}</span> :
+                                        <span></span>
+                                    }
+                                </div>
                                 <small>Username</small>
                                     <div style={{
                                     }}>
