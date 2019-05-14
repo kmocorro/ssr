@@ -44,10 +44,17 @@ export default () => {
             if(res.status >= 200 && res.status < 300 ){
                 let token = res.data.token // api/login return object {token: e...}
                 
-                setToken(token);
-                console.log(token);
-                
-                location.reload();
+                if(token){
+
+                    setToken(token);
+                    console.log(token);
+                    
+                    location.reload();
+                } else {
+
+                    location.reload();
+
+                }
 
             }
         })
