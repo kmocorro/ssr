@@ -45,7 +45,7 @@ export default () => {
     function handleOnClick(e){
 
         setLoginResponse(null);
-        document.getElementById('loginSubmit').style.display = "contents";
+        document.getElementById('loginSubmit').style.display = "block";
 
     }
 
