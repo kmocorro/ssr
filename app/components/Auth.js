@@ -7,6 +7,8 @@ export default () => {
     const username = useCredential();
     const password = useCredential();
     const cookies = new Cookies();
+    
+    const [ loginResponse, setLoginResponse ] = useState(null);
 
     function useCredential(){
         const [ value, setValue ] = useState('');
@@ -94,7 +96,7 @@ export default () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "15px",
-                background: "#f2f2f2",
+                background: "#fff",
             }}>
                 <div style={{
                     width: "390px",
@@ -139,8 +141,7 @@ export default () => {
                                 </div>
                             </div>
                             <small style={{
-                                paddingTop: '10px',
-                                paddingBottom: '10px',
+                                margin: '10px',
                                 opacity: "0.5"
                             }}>By logging in, you indicate that you have read and agree meta's Terms of Service.
                             </small>
