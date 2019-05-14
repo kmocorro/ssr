@@ -55,8 +55,7 @@ export default () => {
                     
                     location.reload();
                 } else {
-
-                    setLoginResponse(res.data);
+                    console.log(token);
 
                 }
 
