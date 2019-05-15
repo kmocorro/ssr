@@ -3,7 +3,7 @@ import LineChart from 'react-chartjs'
 
 export default () => {
 
-    const data = {
+    const dataset = {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [
             {
@@ -21,7 +21,7 @@ export default () => {
     
     return (
         <div>
-            <LineChart.Line data={data} width="600" height="250" redraw />
+            <LineChart.Line data={dataset} options={{ bezierCurve: false }} width="600" height="250" />
         </div>
     )
 
