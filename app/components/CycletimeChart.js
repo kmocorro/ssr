@@ -21,7 +21,7 @@ export default () => {
     
     return (
         <div>
-            <LineChart data={data} width="600" height="250"/>
+            <LineChart.Line data={data} width="600" height="250"/>
         </div>
     )
 
