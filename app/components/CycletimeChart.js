@@ -1,4 +1,5 @@
-import LineChart from 'react-chartjs';
+import React from 'react'
+import LineChart from 'react-chartjs'
 
 export default () => {
 
