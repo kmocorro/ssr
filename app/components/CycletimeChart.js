@@ -20,7 +20,7 @@ export default () => {
     
     return (
         <div>
-            <LineChart data={data} options={} width="600" height="250"/>
+            <LineChart data={data} width="600" height="250"/>
         </div>
     )
 
