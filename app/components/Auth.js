@@ -145,6 +145,7 @@ export default () => {
                                 </div>
                                 <small>Username</small>
                                     <div style={{
+                                        marginBottom: "12px"
                                     }}>
                                         <input type="text" required value={username.value} onChange={username.onChange} onClick={handleOnClick}
                                             style={{
