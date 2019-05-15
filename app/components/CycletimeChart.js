@@ -63,9 +63,9 @@ export default () => {
                         }}>
                             
                         <div>
-                            <LineChart.Line data={dataset} options={{ bezierCurve: false }} width="100%" height="250" />
+                            <LineChart.Line data={dataset} options={{ bezierCurve: false, responsive: true, }} width="600" height="250" />
                         </div>
-                        
+
                         </p>
                     </ul>
                 </div>
