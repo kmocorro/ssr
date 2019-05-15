@@ -1,5 +1,6 @@
 import React from 'react';
 import ReportsBody from './ReportsBody'
+import CycletimeChart from './CycletimeChart'
 
 export default (metaDashboard) => {
 
@@ -462,6 +463,7 @@ export default (metaDashboard) => {
                                 </div>
                             </div>
                             <ReportsBody />
+                            <CycletimeChart />
                         </div>
                     </div>
                 </div>
