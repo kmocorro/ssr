@@ -462,8 +462,8 @@ export default (metaDashboard) => {
                                     </div>
                                 </div>
                             </div>
-                            <ReportsBody />
                             <CycletimeChart />
+                            <ReportsBody />
                         </div>
                     </div>
                 </div>
