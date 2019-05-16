@@ -99,7 +99,7 @@ maintainAspectRatio: false }} width="500" height="250" />
                         lineHeight: "1.3",
                         margin: "1em 0px",
                     }}>
-                        Your Reports History
+                        What's happening?
                     </h4>
                     <ul style={{
                         marginBottom: "0px",
@@ -118,7 +118,7 @@ maintainAspectRatio: false }} width="500" height="250" />
                             marginInlineStart: "0px",
                             marginInlineEnd: "0px"
                         }}>
-                            You don't have any reports yet
+                            There's no comment on cycletime yet
                         </p>
                     </ul>
                 </div>
