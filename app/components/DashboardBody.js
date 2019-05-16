@@ -462,7 +462,7 @@ export default (metaDashboard) => {
                                     </div>
                                 </div>
                             </div>
-                            <CycletimeChart trend={metaDashboard} />
+                            <CycletimeChart cycletime={metaDashboard} />
                             <ReportsBody />
                         </div>
                     </div>
