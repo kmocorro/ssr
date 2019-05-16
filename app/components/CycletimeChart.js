@@ -1,20 +1,30 @@
 import React from 'react'
 import LineChart from 'react-chartjs'
 
-export default () => {
+export default (trend) => {
+
+    let cycletime_labels = [];
+    let cycletime_data = [];
+
+    if(trend.dashboard.cycletime_trend){
+        for(let i=0;i<trend.dashboard.cycletime_trend.length;i++){
+            cycletime_labels.push(trend.dashboard.cycletime_trend[i].label);
+            cycletime_data.push(trend.dashboard.cycletime_trend[i].data);
+        }
+    }
 
     const dataset = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: cycletime_labels,
         datasets: [
             {
-                label: "My dataset",
+                label: "Cycletime Dataset",
                 fillColor: "rgba(151,187,205,0.2)",
                 strokeColor: "rgba(151,187,205,1)",
                 pointColor: "rgba(151,187,205,1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(151,187,205,1)",
-                data: [28, 48, 40, 19, 86, 27, 90]
+                data: cycletime_data
             }
         ]
     }
