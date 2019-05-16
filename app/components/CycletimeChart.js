@@ -2,8 +2,8 @@ import React from 'react'
 import LineChart from 'react-chartjs'
 
 export default (metaDashboard) => {
-    let trend = metaDashboard.metaDashboard.meta;
-    
+    let trend = metaDashboard.metaDashboard;
+
     let cycletime_labels = [];
     let cycletime_data = [];
 
