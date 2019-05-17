@@ -81,7 +81,7 @@ export default (props) => {
                         }}>
                             
                         <div style={{width: "100%"}}>
-                            <LineChart.Line data={dataset} options={} width="500" height="250" />
+                            <LineChart.Line data={dataset} options={options} width="500" height="250" />
                         </div>
 
                         </p>
