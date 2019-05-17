@@ -30,6 +30,13 @@ export default (props) => {
         ]
     }
 
+    const options = {
+        bezierCurve: false,
+        responsive: true, 
+        maintainAspectRatio: false,
+        datasetLabel: 'Hello'
+    }
+
     return (
         <div style={{
             marginBottom: "0px",
@@ -74,8 +81,7 @@ export default (props) => {
                         }}>
                             
                         <div style={{width: "100%"}}>
-                            <LineChart.Line data={dataset} options={{ bezierCurve: false, responsive: true, 
-maintainAspectRatio: false }} width="500" height="250" />
+                            <LineChart.Line data={dataset} options={} width="500" height="250" />
                         </div>
 
                         </p>
