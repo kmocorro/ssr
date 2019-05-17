@@ -34,7 +34,16 @@ export default (props) => {
         bezierCurve: false,
         responsive: true, 
         maintainAspectRatio: false,
-        datasetLabel: 'Hello'
+        scales: {
+            yAxes: [{
+                ticks:{
+                    callback: function(value, index, values){
+                        return value + ' day' 
+                    }
+                },
+                labelString: '(Day)'
+            }]
+        }
     }
 
     return (
