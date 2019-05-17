@@ -75,7 +75,7 @@ export default (metaDashboard) => {
 
         data.append('file', file);
 
-        return axios.post('http://dev-metaspf401.sunpowercorp.com:8080/api/uploader/rmp', data, {withCredentials: true, configFile})
+        return axios.post('http://dev-metaspf401.sunpowercorp.com:8081/api/uploader/rmp', data, {withCredentials: true, configFile})
         .then(res => {
             if(res.status >= 200 && res.status < 300 ){
                 document.getElementById('rmp_file_browser').disabled = false;
