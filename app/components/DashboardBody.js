@@ -39,7 +39,7 @@ export default (metaDashboard) => {
                             color: "rgb(33, 33, 33)",
                             fontWeight: "400",
                             lineHeight: "1.3",
-                        }}>Dashboard (this is sample data)*
+                        }}>Dashboard *(this is sample data)
                         </h2>
                         <div style={{
                             marginTop: "0px",
@@ -136,7 +136,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        median efficiency (%)
+                                        *median efficiency (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -173,7 +173,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        Bin Ne (%)
+                                        *Bin Ne (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -210,7 +210,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        cosmetics (%)
+                                        *cosmetics (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -321,7 +321,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        Financial Yield (%)
+                                        *Financial Yield (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -358,7 +358,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        Electrical Yield (%)
+                                        *Electrical Yield (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -395,7 +395,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        Mechanical Yield (%)
+                                        *Mechanical Yield (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -432,7 +432,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        Broken Wafers (dppm)
+                                        *Broken Wafers (dppm)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
