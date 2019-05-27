@@ -31,13 +31,9 @@ export default (props) => {
         responsive: true, 
         maintainAspectRatio: false,
         scales: {
-            xAxes: [{
-                barPercentage: 0.5,
-                barThickness: 6,
-                maxBarThickness: 8,
-                minBarLength: 2,
-                gridLines: {
-                    offsetGridLines: false
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
                 }
             }]
         }
@@ -48,7 +44,7 @@ export default (props) => {
             marginBottom: "0px",
             gridTemplateColumns: "1fr 1fr",
             display: "grid",
-            gap: "40px 40px",
+            gap: "20px 20px",
         }}>
             <div style={{
 
