@@ -112,7 +112,7 @@ export default (props) => {
                         lineHeight: "1.3",
                         margin: "1em 0px",
                     }}>
-                        
+                        Comments
                     </h4>
                     <ul style={{
                         marginBottom: "0px",
