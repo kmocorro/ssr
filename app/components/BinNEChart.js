@@ -19,12 +19,12 @@ export default (props) => {
         datasets: [
             {
                 label: "Bin Ne3 Dataset",
-                fillColor: "rgba(151,187,205,0.2)",
-                strokeColor: "rgba(151,187,205,1)",
-                pointColor: "rgba(151,187,205,1)",
+                fillColor: "rgba(255, 206, 86, 0.2)",
+                strokeColor: "rgba(255, 206, 86, 1)",
+                pointColor: "rgba(255, 206, 86, 1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(151,187,205,1)",
+                pointHighlightStroke: "rgba(255, 206, 86, 1)",
                 borderWidth: 1,
                 data: binning_data
             }
@@ -35,11 +35,14 @@ export default (props) => {
         responsive: true, 
         maintainAspectRatio: false,
         scales: {
-            yAxes: [{
-                ticks:{
-                    beginAtZero: true
-                },
-                labelString: '(Day)'
+            xAxes: [{
+                barPercentage: 0.5,
+                barThickness: 6,
+                maxBarThickness: 8,
+                minBarLength: 2,
+                gridLines: {
+                    offsetGridLines: false
+                }
             }]
         }
     }
