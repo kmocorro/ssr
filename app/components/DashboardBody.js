@@ -11,6 +11,7 @@ export default (metaDashboard) => {
     const cosmetics = metaDashboard_props.dashboard.dash[2].value;
     const cycletime = metaDashboard_props.dashboard.dash[3].value;
     const percentChange_cycletime = (((metaDashboard_props.dashboard.dash[3].old_value - metaDashboard_props.dashboard.dash[3].value)/metaDashboard_props.dashboard.dash[3].old_value)*100).toFixed(2);
+    const percentChange_median_efficiency = (((metaDashboard_props.dashboard.dash[0].old_value - metaDashboard_props.dashboard.dash[0].value)/metaDashboard_props.dashboard.dash[0].old_value)*100).toFixed(2);
 
     return (
         <div style={{
@@ -136,7 +137,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        *median efficiency (%)
+                                        median efficiency (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -147,14 +148,26 @@ export default (metaDashboard) => {
                                         }}>
                                         {medianEfficiency}
                                         </strong>
-                                        <span style={{
-                                            color:"green",
-                                            display: "block",
-                                            fontSize: "12px",
-                                            fontWeight: "400"
-                                            }}>
-                                            ↑ 0.44%
-                                        </span>
+                                        {
+                                            percentChange_median_efficiency > 0.0 ?
+                                            <span style={{
+                                                color:"green",
+                                                display: "block",
+                                                fontSize: "12px",
+                                                fontWeight: "400"
+                                                }}>
+                                                ↑ {percentChange_median_efficiency}%
+                                            </span>
+                                            :
+                                            <span style={{
+                                                color:"red",
+                                                display: "block",
+                                                fontSize: "12px",
+                                                fontWeight: "400"
+                                                }}>
+                                                ↓ {percentChange_median_efficiency}%
+                                            </span>
+                                        }
                                         <small style={{
                                             opacity: "0.6",
                                             display: "block",
