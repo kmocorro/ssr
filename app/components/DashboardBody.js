@@ -1,5 +1,6 @@
 import React from 'react';
 import ReportsBody from './ReportsBody'
+import MedianEffChart from './MedianEffChart'
 import CycletimeChart from './CycletimeChart'
 
 export default (metaDashboard) => {
