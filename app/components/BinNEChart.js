@@ -19,8 +19,8 @@ export default (props) => {
         datasets: [
             {
                 label: "Bin Ne3 Dataset",
-                backgroundColor: ['rgba(255, 206, 86, 0.2)'],
-                borderColor: ['rgba(255, 206, 86, 1)'],
+                backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                borderColor: 'rgba(255, 206, 86, 1)',
                 borderWidth: 1,
                 data: binning_data
             }
