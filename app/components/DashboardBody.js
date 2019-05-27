@@ -1,6 +1,7 @@
 import React from 'react';
 import ReportsBody from './ReportsBody'
 import MedianEffChart from './MedianEffChart'
+import BinNEChart from './BinNEChart'
 import CycletimeChart from './CycletimeChart'
 
 export default (metaDashboard) => {
@@ -490,6 +491,7 @@ export default (metaDashboard) => {
                                 </div>
                             </div>
                             <MedianEffChart median_eff={metaDashboard} />
+                            <BinNEChart binning={metaDashboard} />
                             <CycletimeChart cycletime={metaDashboard} />
                             <ReportsBody />
                         </div>
