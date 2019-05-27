@@ -12,8 +12,8 @@ export default (metaDashboard) => {
     const cosmetics = metaDashboard_props.dashboard.dash[2].value;
     const cycletime = metaDashboard_props.dashboard.dash[3].value;
     const percentChange_cycletime = (((metaDashboard_props.dashboard.dash[3].old_value - metaDashboard_props.dashboard.dash[3].value)/metaDashboard_props.dashboard.dash[3].old_value)*100).toFixed(2);
-    const percentChange_median_efficiency = (((metaDashboard_props.dashboard.dash[0].old_value - metaDashboard_props.dashboard.dash[0].value)/metaDashboard_props.dashboard.dash[0].old_value)*100).toFixed(2);
-    const percentChange_binning = (((metaDashboard_props.dashboard.dash[1].old_value - metaDashboard_props.dashboard.dash[1].value)/metaDashboard_props.dashboard.dash[1].old_value)*100).toFixed(2);
+    const percentChange_median_efficiency = (((metaDashboard_props.dashboard.dash[0].value - metaDashboard_props.dashboard.dash[0].old_value)/metaDashboard_props.dashboard.dash[0].value)*100).toFixed(2);
+    const percentChange_binning = (((metaDashboard_props.dashboard.dash[1].value - metaDashboard_props.dashboard.dash[1].old_value)/metaDashboard_props.dashboard.dash[1].value)*100).toFixed(2);
 
     return (
         <div style={{
