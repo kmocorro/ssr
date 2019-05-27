@@ -19,12 +19,8 @@ export default (props) => {
         datasets: [
             {
                 label: "Bin Ne3 Dataset",
-                fillColor: "rgba(255, 206, 86, 0.2)",
-                strokeColor: "rgba(255, 206, 86, 1)",
-                pointColor: "rgba(255, 206, 86, 1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(255, 206, 86, 1)",
+                backgroundColor: ['rgba(255, 206, 86, 0.2)'],
+                borderColor: ['rgba(255, 206, 86, 1)'],
                 borderWidth: 1,
                 data: binning_data
             }
