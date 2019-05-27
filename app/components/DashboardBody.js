@@ -238,7 +238,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        *cosmetics (%)
+                                        cosmetics (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -250,12 +250,12 @@ export default (metaDashboard) => {
                                         {cosmetics}
                                         </strong>
                                         <span style={{
-                                            color:"green",
+                                            color:"gray",
                                             display: "block",
                                             fontSize: "12px",
                                             fontWeight: "400"
                                             }}>
-                                            ↑ 1.0%
+                                            ↑ 0%
                                         </span>
                                         <small style={{
                                             opacity: "0.6",
@@ -349,7 +349,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        *Financial Yield (%)
+                                        Financial Yield (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -358,7 +358,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        89.8
+                                        0
                                         </strong>
                                         <span style={{
                                             color:"green",
@@ -366,7 +366,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             fontWeight: "400"
                                             }}>
-                                            ↑ 2.2%
+                                            ↑ 0%
                                         </span>
                                         <small style={{
                                             opacity: "0.6",
@@ -386,7 +386,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        *Electrical Yield (%)
+                                        Electrical Yield (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -395,7 +395,7 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        92.3
+                                        0
                                         </strong>
                                         <span style={{
                                             color:"green",
@@ -403,7 +403,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             fontWeight: "400"
                                             }}>
-                                            ↑ 1.2%
+                                            ↑ 0%
                                         </span>
                                         <small style={{
                                             opacity: "0.6",
@@ -423,7 +423,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        *Mechanical Yield (%)
+                                        Mechanical Yield (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -432,15 +432,15 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        90.2
+                                        0
                                         </strong>
                                         <span style={{
-                                            color:"red",
+                                            color:"gray",
                                             display: "block",
                                             fontSize: "12px",
                                             fontWeight: "400"
                                             }}>
-                                            ↓ 1.4% 
+                                            ↑ 0% 
                                         </span>
                                         <small style={{
                                             opacity: "0.6",
@@ -460,7 +460,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        *Broken Wafers (dppm)
+                                        Broken Wafers (dppm)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -469,15 +469,15 @@ export default (metaDashboard) => {
                                             height: "50px",
                                             display: "block",
                                         }}>
-                                        12,060
+                                        0
                                         </strong>
                                         <span style={{
-                                            color:"red",
+                                            color:"gray",
                                             display: "block",
                                             fontSize: "12px",
                                             fontWeight: "400"
                                             }}>
-                                            ↑ 209
+                                            ↑ 0
                                         </span>
                                         <small style={{
                                             opacity: "0.6",
