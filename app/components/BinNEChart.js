@@ -19,8 +19,8 @@ export default (props) => {
         datasets: [
             {
                 label: "Bin Ne3 Dataset",
-                fillColor: "rgba(255, 206, 86, 0.2)",
-                strokeColor: "rgba(255, 206, 86, 1)",
+                fillColor: "rgba(0, 0, 0, 0.1)",
+                strokeColor: "rgba(0, 0, 0, 0.3)",
                 pointColor: "rgba(255, 206, 86, 1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
