@@ -488,6 +488,7 @@ export default (metaDashboard) => {
                                     </div>
                                 </div>
                             </div>
+                            <MedianEffChart median_eff={metaDashboard} />
                             <CycletimeChart cycletime={metaDashboard} />
                             <ReportsBody />
                         </div>
