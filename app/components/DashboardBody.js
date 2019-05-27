@@ -361,7 +361,7 @@ export default (metaDashboard) => {
                                         0
                                         </strong>
                                         <span style={{
-                                            color:"green",
+                                            color:"gray",
                                             display: "block",
                                             fontSize: "12px",
                                             fontWeight: "400"
@@ -398,7 +398,7 @@ export default (metaDashboard) => {
                                         0
                                         </strong>
                                         <span style={{
-                                            color:"green",
+                                            color:"gray",
                                             display: "block",
                                             fontSize: "12px",
                                             fontWeight: "400"
