@@ -1,5 +1,5 @@
 import React from 'react'
-import LineChart from 'react-chartjs'
+import BarChart from 'react-chartjs'
 
 export default (props) => {
     let trend = props.binning.metaDashboard.meta;
@@ -19,7 +19,7 @@ export default (props) => {
         datasets: [
             {
                 label: "Median Efficiency Dataset",
-                fillColor: "",
+                fillColor: "rgba(151,187,205,0.2)",
                 strokeColor: "rgba(151,187,205,1)",
                 pointColor: "rgba(151,187,205,1)",
                 pointStrokeColor: "#fff",
@@ -90,7 +90,7 @@ export default (props) => {
                         }}>
                             
                         <div style={{width: "100%"}}>
-                            <LineChart.Line data={dataset} options={options} width="500" height="250" />
+                            <BarChart.Bar data={dataset} options={options} width="500" height="250" />
                         </div>
 
                         </p>
