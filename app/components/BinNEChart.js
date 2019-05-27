@@ -18,28 +18,26 @@ export default (props) => {
         labels: binning_labels,
         datasets: [
             {
-                label: "Median Efficiency Dataset",
+                label: "Bin Ne3 Dataset",
                 fillColor: "rgba(151,187,205,0.2)",
                 strokeColor: "rgba(151,187,205,1)",
                 pointColor: "rgba(151,187,205,1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(151,187,205,1)",
+                borderWidth: 1,
                 data: binning_data
             }
         ]
     }
 
     const options = {
-        bezierCurve: false,
         responsive: true, 
         maintainAspectRatio: false,
         scales: {
             yAxes: [{
                 ticks:{
-                    callback: function(value, index, values){
-                        return value + ' day' 
-                    }
+                    beginAtZero: true
                 },
                 labelString: '(Day)'
             }]
