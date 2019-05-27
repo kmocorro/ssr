@@ -491,8 +491,8 @@ export default (metaDashboard) => {
                                 </div>
                             </div>
                             <MedianEffChart median_eff={metaDashboard} />
-                            <BinNEChart binning={metaDashboard} />
                             <CycletimeChart cycletime={metaDashboard} />
+                            <BinNEChart binning={metaDashboard} />
                             <ReportsBody />
                         </div>
                     </div>

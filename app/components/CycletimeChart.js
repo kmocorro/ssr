@@ -19,8 +19,8 @@ export default (props) => {
         datasets: [
             {
                 label: "Cycletime Dataset",
-                fillColor: "rgba(153, 102, 255, 0.2)",
-                strokeColor: "rgba(153, 102, 255, 1)",
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(151,187,205,1)",
                 pointColor: "rgba(151,187,205,1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
@@ -41,7 +41,7 @@ export default (props) => {
                         return value + ' day' 
                     }
                 },
-                labelString: '(Day)'
+                labelString: '(day)'
             }]
         }
     }
