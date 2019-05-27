@@ -6,12 +6,13 @@ export default (metaDashboard) => {
 
     const metaDashboard_props = metaDashboard.metaDashboard.meta;
     
-    const medianEfficiency = metaDashboard_props.dashboard.dash[0].value;
+    const medianEfficiency = (metaDashboard_props.dashboard.dash[0].value).toFixed(2);
     const binNE = metaDashboard_props.dashboard.dash[1].value;
     const cosmetics = metaDashboard_props.dashboard.dash[2].value;
     const cycletime = metaDashboard_props.dashboard.dash[3].value;
     const percentChange_cycletime = (((metaDashboard_props.dashboard.dash[3].old_value - metaDashboard_props.dashboard.dash[3].value)/metaDashboard_props.dashboard.dash[3].old_value)*100).toFixed(2);
     const percentChange_median_efficiency = (((metaDashboard_props.dashboard.dash[0].old_value - metaDashboard_props.dashboard.dash[0].value)/metaDashboard_props.dashboard.dash[0].old_value)*100).toFixed(2);
+    const percentChange_binning = (((metaDashboard_props.dashboard.dash[1].old_value - metaDashboard_props.dashboard.dash[1].value)/metaDashboard_props.dashboard.dash[1].old_value)*100).toFixed(2);
 
     return (
         <div style={{
@@ -186,7 +187,7 @@ export default (metaDashboard) => {
                                             fontSize: "12px",
                                             letterSpacing: "1px",
                                         }}>
-                                        *Bin Ne (%)
+                                        Bin Ne (%)
                                         </span>
                                         <strong style={{
                                             color: "rgb(0, 0, 0)",
@@ -197,14 +198,26 @@ export default (metaDashboard) => {
                                         }}>
                                         {binNE}
                                         </strong>
-                                        <span style={{
-                                            color:"green",
-                                            display: "block",
-                                            fontSize: "12px",
-                                            fontWeight: "400"
-                                            }}>
-                                            ↑ 2.4% 
-                                        </span>
+                                        {
+                                            percentChange_binning > 0.0 ?
+                                            <span style={{
+                                                color:"green",
+                                                display: "block",
+                                                fontSize: "12px",
+                                                fontWeight: "400"
+                                                }}>
+                                                ↑ {percentChange_binning}%
+                                            </span>
+                                            :
+                                            <span style={{
+                                                color:"red",
+                                                display: "block",
+                                                fontSize: "12px",
+                                                fontWeight: "400"
+                                                }}>
+                                                ↓ {percentChange_binning}%
+                                            </span>
+                                        }
                                         <small style={{
                                             opacity: "0.6",
                                             display: "block",
