@@ -43,7 +43,7 @@ export default (metaDashboard) => {
                             color: "rgb(33, 33, 33)",
                             fontWeight: "400",
                             lineHeight: "1.3",
-                        }}>Dashboard *(this is sample data)
+                        }}>Dashboard
                         </h2>
                         <div style={{
                             marginTop: "0px",
